@@ -1,0 +1,614 @@
+@import "~bulma/sass/utilities/_all.sass";
+@import "~bulma/bulma";
+
+.t-is-v {
+  .c-is-R {
+    background: linear-gradient(#d9596d , #d02f48);
+    color: #fff;
+  }
+  .c-is-rO {
+    background: linear-gradient(#ec7546 , #e95b23);
+    color: #fff;
+  }
+  .c-is-yO {
+    background: linear-gradient(#ffa400 , #f49d00);
+    color: #000;
+  }
+  .c-is-Y {
+    background: linear-gradient(#ffd700 , #eec900);
+    color: #000;
+  }
+  .c-is-YG {
+    background: linear-gradient(#b7cc00 , #a8bb00);
+    color: #000;
+  }
+  .c-is-G {
+    background: linear-gradient(#00cc72 , #00a15a);
+    color: #fff;
+  }
+  .c-is-GB {
+    background: linear-gradient(#009992 , #00857f);
+    color: #fff;
+  }
+  .c-is-gB {
+    background: linear-gradient(#0093cc , #00709b);
+    color: #fff;
+  }
+  .c-is-B {
+    background: linear-gradient(#0071cc , #005ba5);
+    color: #fff;
+  }
+  .c-is-V {
+    background: linear-gradient(#5a51ae , #534aa0);
+    color: #fff;
+  }
+  .c-is-P {
+    background: linear-gradient(#883a92 , #81378a);
+    color: #fff;
+  }
+  .c-is-RP {
+    background: linear-gradient(#c9367e , #ad2e6c);
+    color: #fff;
+  }
+}
+
+.t-is-b {
+  .c-is-R {
+    background: linear-gradient(#f07579 , #ef6c70);
+    color: #fff;
+  }
+  .c-is-rO {
+    background: linear-gradient(#fb916a , #fa8155);
+    color: #fff;
+  }
+  .c-is-yO {
+    background: linear-gradient(#ffc166 , #ffad36);
+    color: #000;
+  }
+  .c-is-Y {
+    background: linear-gradient(#fad938 , #fad831);
+    color: #000;
+  }
+  .c-is-YG {
+    background: linear-gradient(#c0d22d , #b7c82b);
+    color: #000;
+  }
+  .c-is-G {
+    background: linear-gradient(#43bc7c , #41b879);
+    color: #fff;
+  }
+  .c-is-GB {
+    background: linear-gradient(#00ccbf , #00aa9f);
+    color: #fff;
+  }
+  .c-is-gB {
+    background: linear-gradient(#00a8cc , #0098b9);
+    color: #fff;
+  }
+  .c-is-B {
+    background: linear-gradient(#2d8dd2 , #2981c0);
+    color: #fff;
+  }
+  .c-is-V {
+    background: linear-gradient(#9998cd , #7574bc);
+    color: #fff;
+  }
+  .c-is-P {
+    background: linear-gradient(#af7db5 , #a165a8);
+    color: #fff;
+  }
+  .c-is-RP {
+    background: linear-gradient(#db8aa8 , #d0678e);
+    color: #fff;
+  }
+}
+
+.t-is-s {
+  .c-is-R {
+    background: linear-gradient(#d0626e , #c53f4d);
+    color: #fff;
+  }
+  .c-is-rO {
+    background: linear-gradient(#d0592f , #cc572e);
+    color: #fff;
+  }
+  .c-is-yO {
+    background: linear-gradient(#e99716 , #e19215);
+    color: #fff;
+  }
+  .c-is-Y {
+    background: linear-gradient(#fcd503 , #debc03);
+    color: #000;
+  }
+  .c-is-YG {
+    background: linear-gradient(#b8cc00 , #9cad00);
+    color: #fff;
+  }
+  .c-is-G {
+    background: linear-gradient(#00995c , #008f56);
+    color: #fff;
+  }
+  .c-is-GB {
+    background: linear-gradient(#009992 , #00827c);
+    color: #fff;
+  }
+  .c-is-gB {
+    background: linear-gradient(#007499 , #006f92);
+    color: #fff;
+  }
+  .c-is-B {
+    background: linear-gradient(#0078cc , #005b9b);
+    color: #fff;
+  }
+  .c-is-V {
+    background: linear-gradient(#5d55aa , #534c98);
+    color: #fff;
+  }
+  .c-is-P {
+    background: linear-gradient(#83408c , #7c3d84);
+    color: #fff;
+  }
+  .c-is-RP {
+    background: linear-gradient(#ba4579 , #a33c6a);
+    color: #fff;
+  }
+}
+
+.t-is-dp {
+  .c-is-R {
+    background: linear-gradient(#ae1e3c , #a61d39);
+    color: #fff;
+  }
+  .c-is-rO {
+    background: linear-gradient(#ae3e1e , #ab3d1d);
+    color: #fff;
+  }
+  .c-is-yO {
+    background: linear-gradient(#cc7c00 , #b16c00);
+    color: #fff;
+  }
+  .c-is-Y {
+    background: linear-gradient(#cca800 , #b39300);
+    color: #fff;
+  }
+  .c-is-YG {
+    background: linear-gradient(#869900 , #748400);
+    color: #fff;
+  }
+  .c-is-G {
+    background: linear-gradient(#00995a , #007243);
+    color: #fff;
+  }
+  .c-is-GB {
+    background: linear-gradient(#009996 , #006664);
+    color: #fff;
+  }
+  .c-is-gB {
+    background: linear-gradient(#006d99 , #005476);
+    color: #fff;
+  }
+  .c-is-B {
+    background: linear-gradient(#004f99 , #004280);
+    color: #fff;
+  }
+  .c-is-V {
+    background: linear-gradient(#493c90 , #3e337b);
+    color: #fff;
+  }
+  .c-is-P {
+    background: linear-gradient(#692772 , #612469);
+    color: #fff;
+  }
+  .c-is-RP {
+    background: linear-gradient(#a8246a , #861d55);
+    color: #fff;
+  }
+}
+
+.t-is-lt {
+  .c-is-R {
+    background: linear-gradient(#f3a7a5 , #f19896);
+    color: #000;
+  }
+  .c-is-rO {
+    background: linear-gradient(#ffb499 , #ffa787);
+    color: #000;
+  }
+  .c-is-yO {
+    background: linear-gradient(#ffd099 , #ffbe71);
+    color: #000;
+  }
+  .c-is-Y {
+    background: linear-gradient(#f2da73 , #f2d96e);
+    color: #000;
+  }
+  .c-is-YG {
+    background: linear-gradient(#d2dc89 , #c7d36d);
+    color: #000;
+  }
+  .c-is-G {
+    background: linear-gradient(#92d3a8 , #85ce9e);
+    color: #000;
+  }
+  .c-is-GB {
+    background: linear-gradient(#6dc5ba , #62c0b5);
+    color: #000;
+  }
+  .c-is-gB {
+    background: linear-gradient(#69b6c9 , #5bafc4);
+    color: #fff;
+  }
+  .c-is-B {
+    background: linear-gradient(#91b4d4 , #6c9ac5);
+    color: #fff;
+  }
+  .c-is-V {
+    background: linear-gradient(#9c9dc9 , #9091c3);
+    color: #fff;
+  }
+  .c-is-P {
+    background: linear-gradient(#c0a1c4 , #b088b5);
+    color: #fff;
+  }
+  .c-is-RP {
+    background: linear-gradient(#e5b3c2 , #d98ea5);
+    color: #fff;
+  }
+}
+
+.t-is-sf {
+  .c-is-R {
+    background: linear-gradient(#d29493 , #ca8281);
+    color: #fff;
+  }
+  .c-is-rO {
+    background: linear-gradient(#de9d87 , #da927a);
+    color: #fff;
+  }
+  .c-is-yO {
+    background: linear-gradient(#e1b584 , #dba66b);
+    color: #000;
+  }
+  .c-is-Y {
+    background: linear-gradient(#dcca89 , #d3bd6c);
+    color: #000;
+  }
+  .c-is-YG {
+    background: linear-gradient(#b3bc76 , #adb66b);
+    color: #000;
+  }
+  .c-is-G {
+    background: linear-gradient(#7db590 , #76b18a);
+    color: #fff;
+  }
+  .c-is-GB {
+    background: linear-gradient(#57a8a0 , #54a39b);
+    color: #fff;
+  }
+  .c-is-gB {
+    background: linear-gradient(#5498ab , #5192a4);
+    color: #fff;
+  }
+  .c-is-B {
+    background: linear-gradient(#7e99b4 , #5d7ea0);
+    color: #fff;
+  }
+  .c-is-V {
+    background: linear-gradient(#8787ab , #7878a0);
+    color: #fff;
+  }
+  .c-is-P {
+    background: linear-gradient(#a48ba7 , #907194);
+    color: #fff;
+  }
+  .c-is-RP {
+    background: linear-gradient(#b67c8e , #b4788b);
+    color: #fff;
+  }
+}
+
+.t-is-d {
+  .c-is-R {
+    background: linear-gradient(#b67c7d , #a35a5c);
+    color: #fff;
+  }
+  .c-is-rO {
+    background: linear-gradient(#be8574 , #af6954);
+    color: #fff;
+  }
+  .c-is-yO {
+    background: linear-gradient(#b78248 , #b37f46);
+    color: #fff;
+  }
+  .c-is-Y {
+    background: linear-gradient(#b59d4a , #ab9446);
+    color: #fff;
+  }
+  .c-is-YG {
+    background: linear-gradient(#9fab54 , #858f46);
+    color: #fff;
+  }
+  .c-is-G {
+    background: linear-gradient(#5ea17a , #4f8766);
+    color: #fff;
+  }
+  .c-is-GB {
+    background: linear-gradient(#349892 , #2a7b76);
+    color: #fff;
+  }
+  .c-is-gB {
+    background: linear-gradient(#2e869e , #246a7d);
+    color: #fff;
+  }
+  .c-is-B {
+    background: linear-gradient(#3c6790 , #34597d);
+    color: #fff;
+  }
+  .c-is-V {
+    background: linear-gradient(#686699 , #54527c);
+    color: #fff;
+  }
+  .c-is-P {
+    background: linear-gradient(#76517b , #6c4a71);
+    color: #fff;
+  }
+  .c-is-RP {
+    background: linear-gradient(#a35c76 , #8b4f65);
+    color: #fff;
+  }
+}
+
+.t-is-dk {
+  .c-is-R {
+    background: linear-gradient(#6e2b36 , #692934);
+    color: #fff;
+  }
+  .c-is-rO {
+    background: linear-gradient(#964536 , #75362a);
+    color: #fff;
+  }
+  .c-is-yO {
+    background: linear-gradient(#7c4f1d , #794d1c);
+    color: #fff;
+  }
+  .c-is-Y {
+    background: linear-gradient(#796420 , #74601f);
+    color: #fff;
+  }
+  .c-is-YG {
+    background: linear-gradient(#667128 , #525b20);
+    color: #fff;
+  }
+  .c-is-G {
+    background: linear-gradient(#2e6b4c , #23523a);
+    color: #fff;
+  }
+  .c-is-GB {
+    background: linear-gradient(#006665 , #004746);
+    color: #fff;
+  }
+  .c-is-gB {
+    background: linear-gradient(#005066 , #004558);
+    color: #fff;
+  }
+  .c-is-B {
+    background: linear-gradient(#1c507d , #123452);
+    color: #fff;
+  }
+  .c-is-V {
+    background: linear-gradient(#3d3762 , #322d51);
+    color: #fff;
+  }
+  .c-is-P {
+    background: linear-gradient(#5c3762 , #432848);
+    color: #fff;
+  }
+  .c-is-RP {
+    background: linear-gradient(#69304b , #612d46);
+    color: #fff;
+  }
+}
+
+.t-is-p {
+  .c-is-R {
+    background: linear-gradient(#f2dbd9 , #e8c2bf);
+    color: #000;
+  }
+  .c-is-rO {
+    background: linear-gradient(#f4ded7 , #ebc2b5);
+    color: #000;
+  }
+  .c-is-yO {
+    background: linear-gradient(#f9e7d2 , #f4d4b0);
+    color: #000;
+  }
+  .c-is-Y {
+    background: linear-gradient(#f7f0d4 , #f2e6b8);
+    color: #000;
+  }
+  .c-is-YG {
+    background: linear-gradient(#dde1b7 , #d8ddad);
+    color: #000;
+  }
+  .c-is-G {
+    background: linear-gradient(#bcdcc5 , #aed4b9);
+    color: #000;
+  }
+  .c-is-GB {
+    background: linear-gradient(#baded8 , #a6d4cc);
+    color: #000;
+  }
+  .c-is-gB {
+    background: linear-gradient(#b9d8df , #add1da);
+    color: #000;
+  }
+  .c-is-B {
+    background: linear-gradient(#beccda , #afc0d1);
+    color: #000;
+  }
+  .c-is-V {
+    background: linear-gradient(#c3c4d5 , #bbbdd0);
+    color: #000;
+  }
+  .c-is-P {
+    background: linear-gradient(#d2c5d3 , #c8b9c9);
+    color: #000;
+  }
+  .c-is-RP {
+    background: linear-gradient(#eddee2 , #dec4ca);
+    color: #000;
+  }
+}
+
+.t-is-ltg {
+  .c-is-R {
+    background: linear-gradient(#d4c5c4 , #c0abaa);
+    color: #000;
+  }
+  .c-is-rO {
+    background: linear-gradient(#d5c7c3 , #c1aba5);
+    color: #000;
+  }
+  .c-is-yO {
+    background: linear-gradient(#daccbe , #cebba8);
+    color: #000;
+  }
+  .c-is-Y {
+    background: linear-gradient(#d8d3c0 , #c6bea1);
+    color: #000;
+  }
+  .c-is-YG {
+    background: linear-gradient(#d4d6c2 , #bdc1a2);
+    color: #000;
+  }
+  .c-is-G {
+    background: linear-gradient(#a7beae , #9db6a5);
+    color: #000;
+  }
+  .c-is-GB {
+    background: linear-gradient(#a5c0bb , #98b6b1);
+    color: #000;
+  }
+  .c-is-gB {
+    background: linear-gradient(#a6babf , #9eb4b9);
+    color: #000;
+  }
+  .c-is-B {
+    background: linear-gradient(#aab3bb , #9ba5af);
+    color: #fff;
+  }
+  .c-is-V {
+    background: linear-gradient(#adadb8 , #a2a2af);
+    color: #fff;
+  }
+  .c-is-P {
+    background: linear-gradient(#b7aeb7 , #aba0ab);
+    color: #fff;
+  }
+  .c-is-RP {
+    background: linear-gradient(#d2c6c9 , #bdacb0);
+    color: #000;
+  }
+}
+
+.t-is-g {
+  .c-is-R {
+    background: linear-gradient(#8e7171 , #745c5c);
+    color: #fff;
+  }
+  .c-is-rO {
+    background: linear-gradient(#92736d , #755c57);
+    color: #fff;
+  }
+  .c-is-yO {
+    background: linear-gradient(#947d6b , #806c5c);
+    color: #fff;
+  }
+  .c-is-Y {
+    background: linear-gradient(#94896b , #786f57);
+    color: #fff;
+  }
+  .c-is-YG {
+    background: linear-gradient(#8a8f71 , #6e725a);
+    color: #fff;
+  }
+  .c-is-G {
+    background: linear-gradient(#5c7063 , #53665a);
+    color: #fff;
+  }
+  .c-is-GB {
+    background: linear-gradient(#587471 , #4e6764);
+    color: #fff;
+  }
+  .c-is-gB {
+    background: linear-gradient(#566e76 , #4f656c);
+    color: #fff;
+  }
+  .c-is-B {
+    background: linear-gradient(#586474 , #4c5765);
+    color: #fff;
+  }
+  .c-is-V {
+    background: linear-gradient(#5e5d6f , #565566);
+    color: #fff;
+  }
+  .c-is-P {
+    background: linear-gradient(#6d5d6f , #605262);
+    color: #fff;
+  }
+  .c-is-RP {
+    background: linear-gradient(#8d727b , #725c63);
+    color: #fff;
+  }
+}
+
+.t-is-dkg {
+  .c-is-R {
+    background: linear-gradient(#594045 , #3e2d30);
+    color: #fff;
+  }
+  .c-is-rO {
+    background: linear-gradient(#5a423f , #3f2e2c);
+    color: #fff;
+  }
+  .c-is-yO {
+    background: linear-gradient(#5b4a3e , #4a3c32);
+    color: #fff;
+  }
+  .c-is-Y {
+    background: linear-gradient(#5a523f , #443e30);
+    color: #fff;
+  }
+  .c-is-YG {
+    background: linear-gradient(#515544 , #3d4033);
+    color: #fff;
+  }
+  .c-is-G {
+    background: linear-gradient(#2e3832 , #2a342e);
+    color: #fff;
+  }
+  .c-is-GB {
+    background: linear-gradient(#2c3a3a , #273434);
+    color: #fff;
+  }
+  .c-is-gB {
+    background: linear-gradient(#29373d , #273439);
+    color: #fff;
+  }
+  .c-is-B {
+    background: linear-gradient(#29313d , #222933);
+    color: #fff;
+  }
+  .c-is-V {
+    background: linear-gradient(#2e2c3a , #292734);
+    color: #fff;
+  }
+  .c-is-P {
+    background: linear-gradient(#392c3a , #302531);
+    color: #fff;
+  }
+  .c-is-RP {
+    background: linear-gradient(#57424a , #3d2e34);
+    color: #fff;
+  }
+}
