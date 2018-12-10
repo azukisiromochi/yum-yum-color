@@ -22,6 +22,13 @@
         </div>
       </section>
     </div>
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>
+          ©yum-yum COLOR
+        </p>
+      </div>
+    </footer>
   </div>
 </template>
 
