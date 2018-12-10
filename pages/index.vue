@@ -1,20 +1,28 @@
 <template>
-  <section class="container">
-    <div class="tile is-ancestor">
-      <div class="tile is-parent">
-        <div class="tile is-child box">
-          <p class="title">HUE CIRCLE</p>
-          <hue-circle/>
-        </div>
+  <div>
+    <nav class="navbar has-shadow is-spaced" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a href="http://localhost:3000/">
+          <img class="logo" :src="logo_icon" alt="yum-yum COLOR">
+        </a>
       </div>
-      <div class="tile is-parent">
-        <div class="tile is-child box">
-          <p class="title">COLOR TONE</p>
-          <color-tone/>
+    </nav>
+    <div class="container">
+      <section class="section">
+        <div class="columns">
+          <div class="column"><hue-circle/></div>
+          <div class="column"><color-tone/></div>
         </div>
-      </div>
+      </section>
+      <section class="section">
+        <div class="columns">
+          <div class="column is-three-quarters">is-three-quarters</div>
+          <div class="column">Auto</div>
+          <div class="column">Auto</div>
+        </div>
+      </section>
     </div>
-  </section>
+  </div>
 </template>
 
 <script>
@@ -22,6 +30,11 @@ import HueCircle from '~/components/HueCircle.vue'
 import ColorTone from '~/components/ColorTone.vue'
 
 export default {
+  data () {
+    return {
+      logo_icon: require("~/static/logo-128.png")
+    }
+  },
   components: {
     'hue-circle': HueCircle,
     'color-tone': ColorTone,
@@ -29,22 +42,27 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .container {
   min-height: 100vh;
+
   display: flex;
+  flex-direction: column;
+
   justify-content: center;
-  align-items: center;
   text-align: center;
+
+  section {
+    width: 100%;
+  }
 }
 
-#color-select-area {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+.logo {
+  height: 80px;
+}
 
-  width: 100%;
-  height: 50%;
+.section {
+  margin-top: 40px;
 }
 
 </style>

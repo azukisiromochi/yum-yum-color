@@ -1,5 +1,5 @@
 <template>
-  <div id="hue-circle-container" v-anime="{ rotate: '1turn', duration: 5000 }">
+  <div id="hue-circle-container">
     <canvas id="hue-circle" data-tooltip="Tooltip Text"></canvas>
   </div>
 </template>
@@ -11,12 +11,16 @@ import VueAnime from 'vue-animejs';
 Vue.use(VueAnime)
 
 export default {
+  data: function () {
+    return {
+      rotate: 0
+    }
+  },
   mounted() {
     const unwatch = this.$store.watch(
       state => state.colorTone.colors,
       colors => {
         this.makeHueCircle(Object.values(colors))
-        this.turnHueCircle()
       }
     )
     const colors = Object.values(this.$store.getters['colorTone/colors'])
@@ -24,6 +28,8 @@ export default {
   },
   methods: {
     makeHueCircle: function (colors) {
+      this.turnHueCircle()
+
       const container = document.getElementById('hue-circle-container')
       const canvas = document.getElementById('hue-circle')
       canvas.width = container.clientWidth
@@ -54,9 +60,10 @@ export default {
       ctx.fill()
     },
     turnHueCircle: function () {
-      this.$anime({
+      this.rotate += 1
+      const turnFunc = this.$anime({
         targets: '#hue-circle',
-        rotate: 360,
+        rotate: this.rotate + 'turn',
         duration: 3000,
       })
     },
