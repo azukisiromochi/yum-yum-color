@@ -26,7 +26,7 @@ export const mutations = {
   },
   select (state, color) {
     state.selectColor = color || 'Y'
-  }
+  },
 }
 
 export const getters = {
@@ -38,5 +38,63 @@ export const getters = {
   },
   colors: (state) => {
     return state.colors
-  }
+  },
+  dyad: (state) => {
+    switch (state.selectColor) {
+      case 'Y':
+        return 'V'
+      case 'YG':
+        return 'P'
+      case 'G':
+        return 'RP'
+      case 'GB':
+        return 'R'
+      case 'gB':
+        return 'rO'
+      case 'B':
+        return 'yO'
+      case 'V':
+        return 'Y'
+      case 'P':
+        return 'YG'
+      case 'RP':
+        return 'G'
+      case 'R':
+        return 'GB'
+      case 'rO':
+        return 'gB'
+      case 'yO':
+        return 'B'
+    }
+    return 'V'
+  },
+  triad: (state) => {
+    switch (state.selectColor) {
+      case 'Y':
+        return ['gB', 'RP']
+      case 'YG':
+        return ['B', 'R']
+      case 'G':
+        return ['V', 'rO']
+      case 'GB':
+        return ['P', 'yO']
+      case 'gB':
+        return ['RP', 'Y']
+      case 'B':
+        return ['R', 'YG']
+      case 'V':
+        return ['rO', 'G']
+      case 'P':
+        return ['yO', 'GB']
+      case 'RP':
+        return ['Y', 'gB']
+      case 'R':
+        return ['YG', 'B']
+      case 'rO':
+        return ['G', 'V']
+      case 'yO':
+        return ['GB', 'P']
+    }
+    return ['gB', 'RP']
+  },
 }

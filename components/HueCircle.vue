@@ -6,7 +6,7 @@
 
 <script>
 import Vue from 'vue'
-import { mapMutations } from 'vuex'
+import { mapMutations, mapGetters } from 'vuex'
 import VueAnime from 'vue-animejs';
 Vue.use(VueAnime)
 
@@ -23,7 +23,7 @@ export default {
         this.makeHueCircle(Object.values(colors))
       }
     )
-    const colors = Object.values(this.$store.getters['colorTone/colors'])
+    const colors = Object.values(this.getColors())
     this.makeHueCircle(colors)
   },
   methods: {
@@ -85,7 +85,7 @@ export default {
       }
     },
     selectedColor: function (degree) {
-      const colorNames = Object.keys(this.$store.getters['colorTone/colors'])
+      const colorNames = Object.keys(this.getColors())
       const check = (degree < 255) ? degree + 360 : degree
       let angle = 255
       for (let i = 0; i < 12; i++) {
@@ -111,6 +111,9 @@ export default {
     },
     ...mapMutations({
       changeColor: 'colorTone/select'
+    }),
+    ...mapGetters({
+      getColors: 'colorTone/colors'
     })
   }
 }

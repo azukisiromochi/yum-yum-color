@@ -15,19 +15,23 @@
         </div>
       </section>
       <section class="section">
-        <div class="columns">
-          <div class="column is-three-quarters">is-three-quarters</div>
-          <div class="column">Auto</div>
-          <div class="column">Auto</div>
-        </div>
+        <color-combinations/>
       </section>
     </div>
     <footer class="footer">
-      <div class="content has-text-centered">
-        <p>
-          ©yum-yum COLOR
-        </p>
+      <div class="columns">
+        <div class="column">
+          <div class="content has-text-centered">
+            <p>Designed & Developed By <a href="https://twitter.com/azukisiromochi">@azukisiromochi</a></p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="content has-text-centered">
+            <p>©yum-yum COLOR</p>
+          </div>
+        </div>
       </div>
+
     </footer>
   </div>
 </template>
@@ -35,6 +39,7 @@
 <script>
 import HueCircle from '~/components/HueCircle.vue'
 import ColorTone from '~/components/ColorTone.vue'
+import ColorCombinations from '~/components/ColorCombinations.vue'
 
 export default {
   data () {
@@ -45,6 +50,7 @@ export default {
   components: {
     'hue-circle': HueCircle,
     'color-tone': ColorTone,
+    'color-combinations': ColorCombinations,
   }
 }
 </script>
@@ -72,4 +78,7 @@ export default {
   margin-top: 40px;
 }
 
+.footer {
+  color: $grey-light;
+}
 </style>
