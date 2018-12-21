@@ -103,6 +103,7 @@ export default {
   text-decoration: none;
   text-align: center;
   transition: .2s ease-in-out;
+  cursor: pointer;
 }
 
 .tone-button:hover{

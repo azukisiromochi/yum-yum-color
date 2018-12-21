@@ -97,4 +97,91 @@ export const getters = {
     }
     return ['gB', 'RP']
   },
+  splitComplementary: (state) => {
+    switch (state.selectColor) {
+      case 'Y':
+        return ['B', 'P']
+      case 'YG':
+        return ['V', 'RP']
+      case 'G':
+        return ['P', 'R']
+      case 'GB':
+        return ['RP', 'rO']
+      case 'gB':
+        return ['R', 'yO']
+      case 'B':
+        return ['rO', 'Y']
+      case 'V':
+        return ['yO', 'YG']
+      case 'P':
+        return ['Y', 'G']
+      case 'RP':
+        return ['YG', 'GB']
+      case 'R':
+        return ['G', 'gB']
+      case 'rO':
+        return ['GB', 'B']
+      case 'yO':
+        return ['gB', 'V']
+    }
+    return ['B', 'P']
+  },
+  analogous: (state) => {
+    switch (state.selectColor) {
+      case 'Y':
+        return ['yO', 'YG']
+      case 'YG':
+        return ['Y', 'G']
+      case 'G':
+        return ['YG', 'GB']
+      case 'GB':
+        return ['G', 'gB']
+      case 'gB':
+        return ['GB', 'B']
+      case 'B':
+        return ['gB', 'V']
+      case 'V':
+        return ['B', 'P']
+      case 'P':
+        return ['V', 'RP']
+      case 'RP':
+        return ['P', 'R']
+      case 'R':
+        return ['RP', 'rO']
+      case 'rO':
+        return ['R', 'yO']
+      case 'yO':
+        return ['rO', 'Y']
+    }
+    return ['yO', 'YG']
+  },
+  tetrad: (state) => {
+    switch (state.selectColor) {
+      case 'Y':
+        return ['GB', 'V', 'R']
+      case 'YG':
+        return ['gB', 'P', 'rO']
+      case 'G':
+        return ['B', 'RP', 'yO']
+      case 'GB':
+        return ['V', 'R', 'Y']
+      case 'gB':
+        return ['P', 'rO', 'YG']
+      case 'B':
+        return ['RP', 'yO', 'G']
+      case 'V':
+        return ['R', 'Y', 'GB']
+      case 'P':
+        return ['rO', 'YG', 'gB']
+      case 'RP':
+        return ['yO', 'G', 'B']
+      case 'R':
+        return ['Y', 'GB', 'V']
+      case 'rO':
+        return ['YG', 'gB', 'P']
+      case 'yO':
+        return ['G', 'B', 'RP']
+    }
+    return ['GB', 'V', 'R']
+  },
 }

@@ -1,6 +1,6 @@
 <template>
   <div id="hue-circle-container">
-    <canvas id="hue-circle" data-tooltip="Tooltip Text"></canvas>
+    <canvas id="hue-circle" v-anime="{ rotate: '1turn', duration: 5000 }"></canvas>
   </div>
 </template>
 
@@ -28,8 +28,6 @@ export default {
   },
   methods: {
     makeHueCircle: function (colors) {
-      this.turnHueCircle()
-
       const container = document.getElementById('hue-circle-container')
       const canvas = document.getElementById('hue-circle')
       canvas.width = container.clientWidth
@@ -58,14 +56,6 @@ export default {
       ctx.arc(x, y, radius, this.toRadian(startAngle), this.toRadian(endAngle))
       ctx.fillStyle = colorCode
       ctx.fill()
-    },
-    turnHueCircle: function () {
-      this.rotate += 1
-      const turnFunc = this.$anime({
-        targets: '#hue-circle',
-        rotate: this.rotate + 'turn',
-        duration: 3000,
-      })
     },
     clickHueCircle: function (e) {
       const canvas = document.getElementById('hue-circle')

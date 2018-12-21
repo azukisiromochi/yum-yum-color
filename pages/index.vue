@@ -15,7 +15,7 @@
         </div>
       </section>
       <section class="section">
-        <color-combinations/>
+        <color-scheme/>
       </section>
     </div>
     <footer class="footer">
@@ -39,7 +39,7 @@
 <script>
 import HueCircle from '~/components/HueCircle.vue'
 import ColorTone from '~/components/ColorTone.vue'
-import ColorCombinations from '~/components/ColorCombinations.vue'
+import ColorScheme from '~/components/ColorScheme.vue'
 
 export default {
   data () {
@@ -50,7 +50,7 @@ export default {
   components: {
     'hue-circle': HueCircle,
     'color-tone': ColorTone,
-    'color-combinations': ColorCombinations,
+    'color-scheme': ColorScheme,
   }
 }
 </script>
