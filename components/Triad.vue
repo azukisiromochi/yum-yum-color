@@ -12,16 +12,16 @@
         </div>
       </div>
     </section>
-    <div class="columns" v-bind:class="tIsX">
-      <div class="column" v-bind:class="cIsX">{{colorCode}}</div>
-      <div class="column" v-bind:class="cIsX2">{{colorCode2}}</div>
-      <div class="column" v-bind:class="cIsX3">{{colorCode3}}</div>
+    <div class="columns" :class="tIsX">
+      <div class="column" :class="cIsX">{{colorCode}}</div>
+      <div class="column" :class="cIsX2">{{colorCode2}}</div>
+      <div class="column" :class="cIsX3">{{colorCode3}}</div>
     </div>
-    <div class="columns" v-bind:class="tIsX">
+    <div class="columns" :class="tIsX">
       <div class="column">
         <div class="card">
-          <header class="card-header" v-bind:class="cIsX">
-            <p class="card-header-title" v-bind:class="cIsX">
+          <header class="card-header" :class="cIsX">
+            <p class="card-header-title" :class="cIsX">
               yum-yum COLOR
             </p>
             <a class="delete is-medium"></a>
@@ -30,7 +30,7 @@
             <div class="media">
               <div class="media-left">
                 <figure class="image is-48x48">
-                  <img class="is-rounded" :src="transparent_image" v-bind:class="cIsX2">
+                  <img class="is-rounded" :src="transparent_image" :class="cIsX2">
                 </figure>
               </div>
               <div class="media-content">
@@ -46,25 +46,25 @@
               <div class="field is-grouped is-grouped-multiline">
                 <div class="control">
                   <div class="tags has-addons">
-                    <span class="tag" v-bind:class="cIsX3">color</span>
+                    <span class="tag" :class="cIsX3">color</span>
                     <a class="tag is-delete"></a>
                   </div>
                 </div>
                 <div class="control">
                   <div class="tags has-addons">
-                    <span class="tag" v-bind:class="cIsX3">HTML</span>
+                    <span class="tag" :class="cIsX3">HTML</span>
                     <a class="tag is-delete"></a>
                   </div>
                 </div>
                 <div class="control">
                   <div class="tags has-addons">
-                    <span class="tag" v-bind:class="cIsX3">CSS</span>
+                    <span class="tag" :class="cIsX3">CSS</span>
                     <a class="tag is-delete"></a>
                   </div>
                 </div>
                 <div class="control">
                   <div class="tags has-addons">
-                    <span class="tag" v-bind:class="cIsX3">Web Design</span>
+                    <span class="tag" :class="cIsX3">Web Design</span>
                     <a class="tag is-delete"></a>
                   </div>
                 </div>
@@ -74,13 +74,16 @@
         </div>
       </div>
       <div class="column">dummy</div>
-      <div class="column">dummy</div>
+      <div class="column">
+        <collage :color-codes="colorCodes"/>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 import { mapMutations, mapGetters } from 'vuex'
+import Collage from '~/components/Collage.vue'
 
 export default {
   data: function () {
@@ -98,7 +101,14 @@ export default {
       cIsX3: 'c-is-RP',
       colorCode3: '#ad2e6c',
       // Transparent image
-      transparent_image: require("~/static/transparent.png")
+      transparent_image: require("~/static/transparent.png"),
+      // Post props
+      colorCodes: {
+        bc: '#eec900',
+        c2: '#00709b',
+        c3: '#ad2e6c',
+        c4: '#00709b',
+      }
     }
   },
   mounted() {
@@ -120,19 +130,25 @@ export default {
     this.$store.watch(
       state => state.colorTone.colors,
       colors => {
-        this.colorCode = colors[this.selectColor]
         this.select()
       }
     )
   },
   methods: {
     select: function() {
+      const colors = this.getColors()
+      this.colorCode = colors[this.selectColor]
+
       let triadColors = this.getTriad()
       this.cIsX2 = 'c-is-' + triadColors[0]
       this.cIsX3 = 'c-is-' + triadColors[1]
-      const colors = this.getColors()
       this.colorCode2 =  colors[triadColors[0]]
       this.colorCode3 =  colors[triadColors[1]]
+
+      this.colorCodes.bc = this.colorCode
+      this.colorCodes.c2 = this.colorCode2
+      this.colorCodes.c3 = this.colorCode3
+      this.colorCodes.c4 = this.colorCode2
     },
     ...mapMutations({
       changeColorTone: 'colorTone/change',
@@ -141,7 +157,10 @@ export default {
       getColors: 'colorTone/colors',
       getTriad: 'colorTone/triad',
     })
-  }
+  },
+  components: {
+    'collage': Collage,
+  },
 }
 </script>
 

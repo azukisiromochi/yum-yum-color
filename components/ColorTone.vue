@@ -4,51 +4,51 @@
       <div class="column">
         <div class="tile is-vertical">
           <div class="tile tone-button-box t-is-p">
-            <div class="tone-button to-grd" v-bind:class="cIsX" @click="changeColorTone('p')">p+</div>
+            <div class="tone-button to-grd" :class="cIsX" @click="changeColorTone('p')">p+</div>
           </div>
           <div class="tile tone-button-box t-is-ltg">
-            <div class="tone-button to-grd" v-bind:class="cIsX" @click="changeColorTone('ltg')">ltg</div>
+            <div class="tone-button to-grd" :class="cIsX" @click="changeColorTone('ltg')">ltg</div>
           </div>
           <div class="tile tone-button-box t-is-g">
-            <div class="tone-button to-grd" v-bind:class="cIsX" @click="changeColorTone('g')">g</div>
+            <div class="tone-button to-grd" :class="cIsX" @click="changeColorTone('g')">g</div>
           </div>
           <div class="tile tone-button-box t-is-dkg">
-            <div class="tone-button to-grd" v-bind:class="cIsX" @click="changeColorTone('dkg')">dkg</div>
+            <div class="tone-button to-grd" :class="cIsX" @click="changeColorTone('dkg')">dkg</div>
           </div>
         </div>
       </div>
       <div class="column">
         <div class="tile is-vertical">
           <div class="tile tone-button-box t-is-lt">
-            <div class="tone-button to-grd" v-bind:class="cIsX" @click="changeColorTone('lt')">lt+</div>
+            <div class="tone-button to-grd" :class="cIsX" @click="changeColorTone('lt')">lt+</div>
           </div>
           <div class="tile tone-button-box  t-is-sf">
-            <div class="tone-button to-grd" v-bind:class="cIsX" @click="changeColorTone('sf')">sf</div>
+            <div class="tone-button to-grd" :class="cIsX" @click="changeColorTone('sf')">sf</div>
           </div>
           <div class="tile tone-button-box t-is-d">
-            <div class="tone-button to-grd" v-bind:class="cIsX" @click="changeColorTone('d')">d</div>
+            <div class="tone-button to-grd" :class="cIsX" @click="changeColorTone('d')">d</div>
           </div>
           <div class="tile tone-button-box t-is-dk">
-            <div class="tone-button to-grd" v-bind:class="cIsX" @click="changeColorTone('dk')">dk</div>
+            <div class="tone-button to-grd" :class="cIsX" @click="changeColorTone('dk')">dk</div>
           </div>
         </div>
       </div>
       <div class="column">
         <div class="tile is-vertical">
           <div class="tile tone-button-box t-is-b">
-            <div class="tone-button to-grd" v-bind:class="cIsX" @click="changeColorTone('b')">b</div>
+            <div class="tone-button to-grd" :class="cIsX" @click="changeColorTone('b')">b</div>
           </div>
           <div class="tile tone-button-box t-is-s">
-            <div class="tone-button to-grd" v-bind:class="cIsX" @click="changeColorTone('s')">s</div>
+            <div class="tone-button to-grd" :class="cIsX" @click="changeColorTone('s')">s</div>
           </div>
           <div class="tile tone-button-box t-is-dp">
-            <div class="tone-button to-grd" v-bind:class="cIsX" @click="changeColorTone('dp')">dp</div>
+            <div class="tone-button to-grd" :class="cIsX" @click="changeColorTone('dp')">dp</div>
           </div>
         </div>
       </div>
       <div class="column">
         <div class="tile tone-button-box  t-is-v">
-          <div class="tone-button to-grd" v-bind:class="cIsX" @click="changeColorTone('v')">v</div>
+          <div class="tone-button to-grd" :class="cIsX" @click="changeColorTone('v')">v</div>
         </div>
       </div>
     </div>

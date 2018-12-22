@@ -19,6 +19,20 @@
     <split-complementary v-show="colorScheme === 'split-comp'"/>
     <analogous v-show="colorScheme === 'analogous'"/>
     <tetrad v-show="colorScheme === 'tetrad'"/>
+    <div class="tile box">
+      <div class="color-scheme-radio">
+      	<input type="radio" id="cs2--dyad" v-model="colorScheme" value="dyad"/>
+      	<label for="cs2--dyad">Dyad</label>
+      	<input type="radio" id="cs2--triad" v-model="colorScheme" value="triad"/>
+      	<label for="cs2--triad">Triad</label>
+      	<input type="radio" id="cs2--split-comp" v-model="colorScheme" value="split-comp"/>
+      	<label for="cs2--split-comp">Split-complementary</label>
+        <input type="radio" id="cs2--analogous" v-model="colorScheme" value="analogous"/>
+      	<label for="cs2--analogous">Analogous</label>
+        <input type="radio" id="cs2--tetrad" v-model="colorScheme" value="tetrad"/>
+      	<label for="cs2--tetrad">Tetrad</label>
+      </div>
+    </div>
   </div>
 </template>
 
