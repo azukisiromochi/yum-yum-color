@@ -17,20 +17,23 @@
     "@nuxtjs/bulma": "^1.2.0",
     "cross-env": "^5.2.0",
     "nuxt": "^2.0.0",
-    "vue-animejs": "^1.0.2"
+    "vue-animejs": "^1.0.2",
+    "vue-loader": "^15.4.2"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",
+    "css-loader": "^2.1.0",
     "eslint": "^5.0.1",
     "eslint-config-prettier": "^3.1.0",
     "eslint-loader": "^2.0.0",
     "eslint-plugin-prettier": "2.6.2",
     "eslint-plugin-vue": "^4.0.0",
-    "node-sass": "^4.10.0",
+    "node-sass": "^4.11.0",
     "nodemon": "^1.11.0",
     "nuxt-sass-resources-loader": "^2.0.5",
     "prettier": "1.14.3",
     "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
     "vue-style-loader": "^4.1.2"
   }
 }
