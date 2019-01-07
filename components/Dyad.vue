@@ -72,7 +72,9 @@
           </div>
         </div>
       </div>
-      <div class="column">dummy</div>
+      <div class="column">
+        <animation :color-codes="colorCodes"/>
+      </div>
       <div class="column">
         <collage :color-codes="colorCodes"/>
       </div>
@@ -82,6 +84,7 @@
 
 <script>
 import { mapMutations, mapGetters } from 'vuex'
+import Animation from '~/components/Animation.vue'
 import Collage from '~/components/Collage.vue'
 
 export default {
@@ -153,6 +156,7 @@ export default {
     })
   },
   components: {
+    'animation': Animation,
     'collage': Collage,
   },
 }
