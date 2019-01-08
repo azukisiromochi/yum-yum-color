@@ -39,6 +39,35 @@ export const getters = {
   colors: (state) => {
     return state.colors
   },
+  degree: (state) => {
+    switch (state.selectColor) {
+      case 'Y':
+        return 0
+      case 'YG':
+        return 30
+      case 'G':
+        return 60
+      case 'GB':
+        return 90
+      case 'gB':
+        return 120
+      case 'B':
+        return 150
+      case 'V':
+        return 180
+      case 'P':
+        return 210
+      case 'RP':
+        return 240
+      case 'R':
+        return 270
+      case 'rO':
+        return 300
+      case 'yO':
+        return 330
+    }
+    return 0
+  },
   dyad: (state) => {
     switch (state.selectColor) {
       case 'Y':

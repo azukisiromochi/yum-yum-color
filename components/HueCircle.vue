@@ -1,6 +1,7 @@
 <template>
   <div id="hue-circle-container">
-    <canvas id="hue-circle" v-anime="{ rotate: '1turn', duration: 5000 }"></canvas>
+    <canvas id="hue-circle"></canvas>
+    <div id="fork"><img :src="fork_img"></div>
   </div>
 </template>
 
@@ -13,7 +14,7 @@ Vue.use(VueAnime)
 export default {
   data: function () {
     return {
-      rotate: 0
+      fork_img: require("~/static/fork.png")
     }
   },
   mounted() {
@@ -32,7 +33,10 @@ export default {
       const canvas = document.getElementById('hue-circle')
       canvas.width = container.clientWidth
       canvas.height = container.clientHeight
-      canvas.addEventListener('click', this.clickHueCircle, false)
+
+      // click event
+      const fork = document.getElementById('fork')
+      fork.addEventListener('click', this.clickHueCircle, false)
 
       const x = canvas.width / 2
       const y = canvas.height / 2
@@ -71,6 +75,11 @@ export default {
         const colorName = this.selectedColor(degree)
         if (colorName) {
           this.changeColor(colorName)
+          this.$anime({
+            targets: '#fork',
+            duration: 5000,
+            rotate: this.getDegree(),
+          })
         }
       }
     },
@@ -103,7 +112,8 @@ export default {
       changeColor: 'colorTone/select'
     }),
     ...mapGetters({
-      getColors: 'colorTone/colors'
+      getColors: 'colorTone/colors',
+      getDegree: 'colorTone/degree',
     })
   }
 }
@@ -111,6 +121,15 @@ export default {
 
 <style lang="scss">
 #hue-circle-container {
+  position: relative;
+  width: 420px;
+  height: 420px;
+  margin: auto;
+}
+#fork {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 420px;
   height: 420px;
   margin: auto;
