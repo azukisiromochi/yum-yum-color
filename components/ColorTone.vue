@@ -4,51 +4,63 @@
       <div class="column">
         <div class="tile is-vertical">
           <div class="tile tone-button-box t-is-p">
-            <div class="tone-button to-grd" :class="cIsX" @click="changeColorTone('p')">p+</div>
+            <div class="tone-button to-grd" :class="cIsX" @click="selectTone('p')">p+</div>
+            <div v-show="tone === 'p'" class="butterfly"><img :src="butterfly_img"></div>
           </div>
           <div class="tile tone-button-box t-is-ltg">
-            <div class="tone-button to-grd" :class="cIsX" @click="changeColorTone('ltg')">ltg</div>
+            <div class="tone-button to-grd" :class="cIsX" @click="selectTone('ltg')">ltg</div>
+            <div v-show="tone === 'ltg'" class="butterfly"><img :src="butterfly_img"></div>
           </div>
           <div class="tile tone-button-box t-is-g">
-            <div class="tone-button to-grd" :class="cIsX" @click="changeColorTone('g')">g</div>
+            <div class="tone-button to-grd" :class="cIsX" @click="selectTone('g')">g</div>
+            <div v-show="tone === 'g'" class="butterfly"><img :src="butterfly_img"></div>
           </div>
           <div class="tile tone-button-box t-is-dkg">
-            <div class="tone-button to-grd" :class="cIsX" @click="changeColorTone('dkg')">dkg</div>
+            <div class="tone-button to-grd" :class="cIsX" @click="selectTone('dkg')">dkg</div>
+            <div v-show="tone === 'dkg'" class="butterfly"><img :src="butterfly_img"></div>
           </div>
         </div>
       </div>
       <div class="column">
         <div class="tile is-vertical">
           <div class="tile tone-button-box t-is-lt">
-            <div class="tone-button to-grd" :class="cIsX" @click="changeColorTone('lt')">lt+</div>
+            <div class="tone-button to-grd" :class="cIsX" @click="selectTone('lt')">lt+</div>
+            <div v-show="tone === 'lt'" class="butterfly"><img :src="butterfly_img"></div>
           </div>
           <div class="tile tone-button-box  t-is-sf">
-            <div class="tone-button to-grd" :class="cIsX" @click="changeColorTone('sf')">sf</div>
+            <div class="tone-button to-grd" :class="cIsX" @click="selectTone('sf')">sf</div>
+            <div v-show="tone === 'sf'" class="butterfly"><img :src="butterfly_img"></div>
           </div>
           <div class="tile tone-button-box t-is-d">
-            <div class="tone-button to-grd" :class="cIsX" @click="changeColorTone('d')">d</div>
+            <div class="tone-button to-grd" :class="cIsX" @click="selectTone('d')">d</div>
+            <div v-show="tone === 'd'" class="butterfly"><img :src="butterfly_img"></div>
           </div>
           <div class="tile tone-button-box t-is-dk">
-            <div class="tone-button to-grd" :class="cIsX" @click="changeColorTone('dk')">dk</div>
+            <div class="tone-button to-grd" :class="cIsX" @click="selectTone('dk')">dk</div>
+            <div v-show="tone === 'dk'" class="butterfly"><img :src="butterfly_img"></div>
           </div>
         </div>
       </div>
       <div class="column">
         <div class="tile is-vertical">
           <div class="tile tone-button-box t-is-b">
-            <div class="tone-button to-grd" :class="cIsX" @click="changeColorTone('b')">b</div>
+            <div class="tone-button to-grd" :class="cIsX" @click="selectTone('b')">b</div>
+            <div v-show="tone === 'b'" class="butterfly"><img :src="butterfly_img"></div>
           </div>
           <div class="tile tone-button-box t-is-s">
-            <div class="tone-button to-grd" :class="cIsX" @click="changeColorTone('s')">s</div>
+            <div class="tone-button to-grd" :class="cIsX" @click="selectTone('s')">s</div>
+            <div v-show="tone === 's'" class="butterfly"><img :src="butterfly_img"></div>
           </div>
           <div class="tile tone-button-box t-is-dp">
-            <div class="tone-button to-grd" :class="cIsX" @click="changeColorTone('dp')">dp</div>
+            <div class="tone-button to-grd" :class="cIsX" @click="selectTone('dp')">dp</div>
+            <div v-show="tone === 'dp'" class="butterfly"><img :src="butterfly_img"></div>
           </div>
         </div>
       </div>
       <div class="column">
         <div class="tile tone-button-box  t-is-v">
-          <div class="tone-button to-grd" :class="cIsX" @click="changeColorTone('v')">v</div>
+          <div class="tone-button to-grd" :class="cIsX" @click="selectTone('v')">v</div>
+          <div v-show="tone === 'v'" class="butterfly"><img :src="butterfly_img"></div>
         </div>
       </div>
     </div>
@@ -61,7 +73,9 @@ import { mapMutations } from 'vuex'
 export default {
   data: function () {
     return {
-      cIsX: 'c-is-Y'
+      tone: 'v',
+      cIsX: 'c-is-Y',
+      butterfly_img: require("~/static/butterfly.png")
     }
   },
   mounted() {
@@ -73,6 +87,23 @@ export default {
     )
   },
   methods: {
+    selectTone: function (tone) {
+      this.changeColorTone(tone)
+
+      const oldTone = this.tone
+      const newTone = tone
+      this.tone = tone
+      console.log('old:'+oldTone)
+      console.log('new:'+newTone)
+      // this.$anime({
+      //   targets: '.t-is-' + newTone + ' .butterfly',
+      //   duration: 3000,
+      //   display: {
+      //     value: 'block',
+      //     easing: 'easeInOutSine'
+      //   },
+      // })
+    },
     ...mapMutations({
       changeColorTone: 'colorTone/change'
     })
@@ -88,6 +119,7 @@ export default {
 }
 
 .tone-button-box {
+  position: relative;
   justify-content: center;
   align-items: center !important;
 }
@@ -113,6 +145,14 @@ export default {
   5%  { transform: scale(1.1, .8); }
   10% { transform: scale(.8, 1.1) translateY(-5px); }
   15% { transform: scale(1, 1); }
+}
+
+.butterfly {
+  // display: none;
+  position: absolute;
+  width: 60px;
+  top: 0;
+  left: 15px;
 }
 
 </style>
