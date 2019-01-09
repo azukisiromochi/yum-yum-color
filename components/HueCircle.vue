@@ -2,6 +2,7 @@
   <div id="hue-circle-container">
     <canvas id="hue-circle"></canvas>
     <div id="fork"><img :src="fork_img"></div>
+    <div id="cover"></div>
   </div>
 </template>
 
@@ -35,7 +36,7 @@ export default {
       canvas.height = container.clientHeight
 
       // click event
-      const fork = document.getElementById('fork')
+      const fork = document.getElementById('cover')
       fork.addEventListener('click', this.clickHueCircle, false)
 
       const x = canvas.width / 2
@@ -127,6 +128,14 @@ export default {
   margin: auto;
 }
 #fork {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 420px;
+  height: 420px;
+  margin: auto;
+}
+#cover {
   position: absolute;
   top: 0;
   left: 0;

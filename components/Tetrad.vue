@@ -78,7 +78,7 @@
         <animation :color-codes="colorCodes"/>
       </div>
       <div class="column">
-        <collage :color-codes="colorCodes"/>
+        <picture-frame :color-codes="colorCodes"/>
       </div>
     </div>
   </div>
@@ -87,7 +87,7 @@
 <script>
 import { mapMutations, mapGetters } from 'vuex'
 import Animation from '~/components/Animation.vue'
-import Collage from '~/components/Collage.vue'
+import Picture from '~/components/Picture.vue'
 
 export default {
   data: function () {
@@ -169,7 +169,7 @@ export default {
   },
   components: {
     'animation': Animation,
-    'collage': Collage,
+    'picture-frame': Picture,
   },
 }
 </script>

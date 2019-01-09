@@ -67,9 +67,13 @@ export default {
     margin-bottom: 10px;
   }
 
-  /deep/ .card-header {
-    .delete {
-      margin: 5px;
+  /deep/ .card {
+    min-width: 300px;
+
+    .card-header {
+      .delete {
+        margin: 5px;
+      }
     }
   }
 
