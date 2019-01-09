@@ -88,21 +88,51 @@ export default {
   },
   methods: {
     selectTone: function (tone) {
-      this.changeColorTone(tone)
-
       const oldTone = this.tone
       const newTone = tone
-      this.tone = tone
-      console.log('old:'+oldTone)
-      console.log('new:'+newTone)
-      // this.$anime({
-      //   targets: '.t-is-' + newTone + ' .butterfly',
-      //   duration: 3000,
-      //   display: {
-      //     value: 'block',
-      //     easing: 'easeInOutSine'
-      //   },
-      // })
+      if (oldTone === newTone) return
+
+      const fly = this.$anime({
+        targets: '.t-is-' + oldTone + ' .butterfly',
+        duration: 1000,
+        translateX: 20,
+        translateY: -30,
+        rotate: -10,
+        opacity: {
+          value: 0,
+          delay: 200,
+        },
+        width: {
+          value: '-=20',
+          delay: 200,
+        },
+        height: {
+          value: '-=20',
+          delay: 200,
+        },
+        easing: 'easeInOutQuad',
+      })
+      fly.complete = () => {
+        this.tone = tone
+        this.$anime({
+          targets: '.t-is-' + newTone + ' .butterfly',
+          duration: 1000,
+          translateX: [-40, 0],
+          translateY: [-20, 0],
+          rotate: {
+            value: [60, 0],
+            delay: 250,
+          },
+          opacity: {
+            value: [0, 1],
+            delay: 200,
+          },
+          width: ['40px', '60px'],
+          height: ['40px', '60px'],
+          easing: 'easeInOutQuad',
+        })
+      }
+      this.changeColorTone(tone)
     },
     ...mapMutations({
       changeColorTone: 'colorTone/change'
