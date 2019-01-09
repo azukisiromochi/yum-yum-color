@@ -67,6 +67,10 @@ export default {
     margin-bottom: 10px;
   }
 
+  /deep/ .color-scheme {
+    margin-bottom: 30px;
+  }
+
   /deep/ .card {
     min-width: 300px;
 

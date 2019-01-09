@@ -178,8 +178,8 @@ export default {
 }
 
 .butterfly {
-  // display: none;
   position: absolute;
+  pointer-events: none;
   width: 60px;
   top: 0;
   left: 15px;

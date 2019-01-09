@@ -13,7 +13,7 @@
         </div>
       </div>
     </section>
-    <div class="columns" :class="tIsX">
+    <div class="columns color-scheme" :class="tIsX">
       <div class="column is-6" :class="cIsX">{{colorCode}}</div>
       <div class="column" :class="cIsX2">{{colorCode2}}</div>
       <div class="column" :class="cIsX3">{{colorCode3}}</div>

@@ -129,6 +129,7 @@ export default {
 }
 #fork {
   position: absolute;
+  pointer-events: none;
   top: 0;
   left: 0;
   width: 420px;

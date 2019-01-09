@@ -1783,6 +1783,7 @@ export default {
   width: 312px;
 }
 #frame{
+  pointer-events: none;
   width: 400px;
 }
 </style>
