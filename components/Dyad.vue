@@ -13,8 +13,8 @@
       </div>
     </section>
     <div class="columns color-scheme" :class="tIsX">
-      <div class="column is-8" :class="cIsX">{{colorCode}}</div>
-      <div class="column" :class="cIsX2">{{colorCode2}}</div>
+      <div class="column is-8" :class="cIsX" @click="copyColorCode(colorCode)">{{colorCode}}</div>
+      <div class="column" :class="cIsX2" @click="copyColorCode(colorCode2)">{{colorCode2}}</div>
     </div>
     <div class="columns" :class="tIsX">
       <div class="column">
@@ -146,6 +146,25 @@ export default {
       this.colorCodes.c2 = this.colorCode2
       this.colorCodes.c3 = this.colorCode2
       this.colorCodes.c4 = this.colorCode2
+    },
+    copyColorCode: function (colorCode) {
+      const temp = document.createElement('div')
+      temp.appendChild(document.createElement('pre')).textContent = colorCode
+
+      const s = temp.style
+      s.position = 'fixed'
+      s.left = '-100%'
+
+      document.body.appendChild(temp)
+      document.getSelection().selectAllChildren(temp)
+
+      if (document.execCommand('copy')) {
+        alert('Copied to clipboard!')
+      } else {
+        alert('Failed to copy to clipboard...')
+      }
+
+      document.body.removeChild(temp)
     },
     ...mapMutations({
       changeColorTone: 'colorTone/change',

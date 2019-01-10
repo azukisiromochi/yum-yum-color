@@ -23,7 +23,6 @@ export default {
       	'border-left': '98px solid ' + this.colorCodes.bc,
       },
       c4Style: { background: this.colorCodes.c4 },
-      frame_image: require("~/static/picture-frame.png"),
     }
   },
   mounted() {

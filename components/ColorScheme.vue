@@ -68,6 +68,7 @@ export default {
   }
 
   /deep/ .color-scheme {
+    cursor: url("~/static/color-palette.cur"), pointer;
     margin-bottom: 30px;
   }
 
@@ -83,6 +84,7 @@ export default {
 
   /deep/ .hero {
     .title, .subtitle {
+      font-family: amertype_md_btmedium, serif !important;
       color: $grey-light;
     }
   }

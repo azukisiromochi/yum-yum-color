@@ -79,6 +79,7 @@ export default {
 }
 
 .footer {
+  font-family: amertype_md_btmedium, serif !important;
   color: $grey-light;
 }
 </style>
