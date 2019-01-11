@@ -68,7 +68,7 @@ export default {
   }
 
   /deep/ .color-scheme {
-    cursor: url("~/static/color-palette.cur"), pointer;
+    cursor: url('/color-palette.png'), pointer;
     margin-bottom: 30px;
   }
 

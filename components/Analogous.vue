@@ -85,9 +85,12 @@
 </template>
 
 <script>
+import Vue from 'vue'
 import { mapMutations, mapGetters } from 'vuex'
 import Animation from '~/components/Animation.vue'
 import Picture from '~/components/Picture.vue'
+import Toasted from 'vue-toasted'
+Vue.use(Toasted)
 
 export default {
   data: function () {
@@ -105,7 +108,7 @@ export default {
       cIsX3: 'c-is-YG',
       colorCode3: '#a8bb00',
       // Transparent image
-      transparent_image: require("~/static/transparent.png"),
+      transparent_image: require('~/static/transparent.png'),
       // Post props
       colorCodes: {
         bc: '#eec900',
@@ -166,9 +169,17 @@ export default {
       document.getSelection().selectAllChildren(temp)
 
       if (document.execCommand('copy')) {
-        alert('Copied to clipboard!')
+        this.$toasted.show('Copied to clipboard !!', {
+        	 theme: 'outline',
+        	 position: 'top-center',
+        	 duration : 2000
+        })
       } else {
-        alert('Failed to copy to clipboard...')
+        this.$toasted.show('Failed to copy to clipboard...', {
+        	 theme: 'bubble',
+        	 position: 'top-center',
+        	 duration : 2000
+        })
       }
 
       document.body.removeChild(temp)

@@ -18,7 +18,8 @@
     "cross-env": "^5.2.0",
     "nuxt": "^2.0.0",
     "vue-animejs": "^1.0.2",
-    "vue-loader": "^15.4.2"
+    "vue-loader": "^15.4.2",
+    "vue-toasted": "^1.1.26"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",
