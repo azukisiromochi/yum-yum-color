@@ -73,18 +73,19 @@ import { mapMutations } from 'vuex'
 export default {
   data: function () {
     return {
-      tone: 'v',
+      tone: '',
       cIsX: 'c-is-Y',
       butterfly_img: require("~/static/butterfly.png")
     }
   },
   mounted() {
-    const unwatch = this.$store.watch(
+    this.$store.watch(
       state => state.colorTone.selectColor,
       selectColor => {
         this.cIsX = 'c-is-' + selectColor
       }
     )
+    this.selectTone('v')
   },
   methods: {
     selectTone: function (tone) {

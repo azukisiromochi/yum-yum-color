@@ -25,8 +25,16 @@ export default {
         this.makeHueCircle(Object.values(colors))
       }
     )
+
     const colors = Object.values(this.getColors())
     this.makeHueCircle(colors)
+
+    this.$anime({
+      targets: '#fork',
+      delay: 500,
+      duration: 5000,
+      rotate: [180, 0],
+    })
   },
   methods: {
     makeHueCircle: function (colors) {
