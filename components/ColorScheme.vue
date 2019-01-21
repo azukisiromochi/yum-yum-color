@@ -69,7 +69,7 @@ export default {
 
   /deep/ .color-scheme {
     font-family: amertype_md_btmedium, serif !important;
-    cursor: url('/color-palette.png'), pointer;
+    cursor: url('/color-palette.png') 16 16, pointer;
     margin-bottom: 30px;
   }
 
