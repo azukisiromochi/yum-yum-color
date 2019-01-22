@@ -1,6 +1,6 @@
 <template>
   <div class="is-dyad">
-    <section class="hero">
+    <section class="hero is-hidden-touch">
       <div class="hero-body">
         <div class="container has-text-left">
           <h1 class="title">
@@ -12,7 +12,7 @@
         </div>
       </div>
     </section>
-    <div class="columns color-scheme" :class="tIsX">
+    <div class="columns color-scheme" :class="isTablet ? tIsX + ' is-flex-touch' : tIsX">
       <div class="column is-8" :class="cIsX" @click="copyColorCode(colorCode)">{{colorCode}}</div>
       <div class="column" :class="cIsX2" @click="copyColorCode(colorCode2)">{{colorCode2}}</div>
     </div>
@@ -87,6 +87,7 @@ import Vue from 'vue'
 import { mapMutations, mapGetters } from 'vuex'
 import Animation from '~/components/Animation.vue'
 import Picture from '~/components/Picture.vue'
+import Device from 'ismobilejs'
 import Toasted from 'vue-toasted'
 Vue.use(Toasted)
 
@@ -96,21 +97,18 @@ export default {
       tone: 'v',
       selectColor: 'Y',
       tIsX: 't-is-v',
-      // Main color
       cIsX: 'c-is-Y',
       colorCode: '#eec900',
-      // No.2 color
       cIsX2: 'c-is-V',
       colorCode2: '#534aa0',
-      // Transparent image
       transparent_image: require('~/static/transparent.png'),
-      // Post props
       colorCodes: {
         bc: '#eec900',
         c2: '#534aa0',
         c3: '#534aa0',
         c4: '#534aa0',
-      }
+      },
+      isTablet: Device.tablet,
     }
   },
   mounted() {

@@ -70,11 +70,14 @@ export default {
   /deep/ .color-scheme {
     font-family: amertype_md_btmedium, serif !important;
     cursor: url('/color-palette.png') 16 16, pointer;
+    margin-top: 10px;
     margin-bottom: 30px;
   }
 
   /deep/ .card {
+    margin: auto;
     min-width: 300px;
+    max-width: 400px;
 
     .card-header {
       .delete {

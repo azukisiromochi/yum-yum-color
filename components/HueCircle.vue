@@ -1,5 +1,5 @@
 <template>
-  <div id="hue-circle-container">
+  <div id="hue-circle-container" :class="isMobile ? 'is-flex-touch' : ''">
     <canvas id="hue-circle"></canvas>
     <div id="fork"><img :src="fork_img"></div>
     <div id="cover"></div>
@@ -9,13 +9,15 @@
 <script>
 import Vue from 'vue'
 import { mapMutations, mapGetters } from 'vuex'
+import Device from 'ismobilejs'
 import VueAnime from 'vue-animejs';
 Vue.use(VueAnime)
 
 export default {
   data: function () {
     return {
-      fork_img: require("~/static/fork.png")
+      fork_img: require("~/static/fork.png"),
+      isMobile: Device.any,
     }
   },
   mounted() {
@@ -134,22 +136,40 @@ export default {
   width: 420px;
   height: 420px;
   margin: auto;
-}
-#fork {
-  position: absolute;
-  pointer-events: none;
-  top: 0;
-  left: 0;
-  width: 420px;
-  height: 420px;
-  margin: auto;
-}
-#cover {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 420px;
-  height: 420px;
-  margin: auto;
+
+  #fork {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    width: 420px;
+    height: 420px;
+    margin: auto;
+  }
+  #cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 420px;
+    height: 420px;
+    margin: auto;
+  }
+
+  &.is-flex-touch {
+    width: 325px;
+    height: 325px;
+    margin: auto;
+
+    #fork {
+      width: 325px;
+      height: 325px;
+      margin: auto;
+    }
+    #cover {
+      width: 325px;
+      height: 325px;
+      margin: auto;
+    }
+  }
 }
 </style>

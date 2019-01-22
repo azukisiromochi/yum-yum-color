@@ -19,10 +19,11 @@
     "@nuxtjs/axios": "^5.0.0",
     "@nuxtjs/bulma": "^1.2.0",
     "cross-env": "^5.2.0",
+    "ismobilejs": "^0.5.1",
     "nuxt": "^2.0.0",
     "nuxt-fontawesome": "^0.4.0",
     "vue-animejs": "^1.0.2",
-    "vue-loader": "^15.4.2",
+    "vue-loader": "^15.5.1",
     "vue-toasted": "^1.1.26"
   },
   "devDependencies": {

@@ -1,6 +1,6 @@
 <template>
   <div id="tone-container">
-    <div class="columns">
+    <div class="columns" :class="isMobile ? 'is-flex-touch' : ''">
       <div class="column">
         <div class="tile is-vertical">
           <div class="tile tone-button-box t-is-p">
@@ -69,13 +69,15 @@
 
 <script>
 import { mapMutations } from 'vuex'
+import Device from 'ismobilejs'
 
 export default {
   data: function () {
     return {
       tone: '',
       cIsX: 'c-is-Y',
-      butterfly_img: require("~/static/butterfly.png")
+      butterfly_img: require("~/static/butterfly.png"),
+      isMobile: Device.any,
     }
   },
   mounted() {
@@ -186,4 +188,15 @@ export default {
   left: 15px;
 }
 
+// mobile styles
+.is-flex-touch {
+  .tone-button {
+    margin: 5px;
+    display: inline-block;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    cursor: url('/flower.png') 16 16, pointer;
+  }
+}
 </style>

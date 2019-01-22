@@ -1,5 +1,5 @@
 <template>
-  <div id="picture-container">
+  <div id="picture-container" :class="isMobile ? 'is-flex-touch' : ''">
     <div id="frame"><img :src="frame_image"></div>
     <svg
       xmlns:dc="http://purl.org/dc/elements/1.1/"
@@ -1747,6 +1747,8 @@
 </template>
 
 <script>
+import Device from 'ismobilejs'
+
 export default {
   props: {
     colorCodes: Object,
@@ -1758,6 +1760,7 @@ export default {
       c3Style: { fill: this.colorCodes.c3 },
       c4Style: { fill: this.colorCodes.c4 },
       frame_image: require("~/static/picture-frame.png"),
+      isMobile: Device.any,
     }
   },
   mounted() {
@@ -1785,5 +1788,21 @@ export default {
 #frame{
   pointer-events: none;
   width: 400px;
+}
+
+// mobile styles
+.is-flex-touch {
+  #picture {
+    top: 32px;
+    left: 32px;
+    width: 234px;
+  }
+  #frame{
+    width: 300px;
+
+    img {
+      max-width: 300px;
+    }
+  }
 }
 </style>
