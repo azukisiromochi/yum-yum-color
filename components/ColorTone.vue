@@ -166,7 +166,7 @@ export default {
   text-decoration: none;
   text-align: center;
   transition: .2s ease-in-out;
-  cursor: pointer;
+  cursor: url('/flower.png') 16 16, pointer;
 }
 
 .tone-button:hover{

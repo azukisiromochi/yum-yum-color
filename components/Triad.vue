@@ -40,7 +40,7 @@
             </div>
             <div class="content has-text-left">
               <p>
-                "yum-yum COLOR" is a web service that provides an intuitive color combinations. Using the Japanese color system PCCS.
+                "Yum-yum COLOR" is a web service that can intuitively select color combinations. Using the Japanese color system PCCS.
                 <a>#color</a> <a>#css</a>
               </p>
               <div class="field is-grouped is-grouped-multiline">
