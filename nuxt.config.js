@@ -39,13 +39,20 @@ module.exports = {
   ** Nuxt.js modules
   */
   modules: [
-    // Doc: https://github.com/nuxt-community/axios-module#usage
+    '@nuxtjs/pwa',
     '@nuxtjs/axios',
-    // provide path to the file with resources
     ['nuxt-sass-resources-loader', './assets/main.scss'],
-    // fontawesome
     'nuxt-fontawesome'
   ],
+  
+  /*
+  ** PWA configuration
+  */
+  manifest: {
+    name: "yum-yum COLOR",
+    lang: 'ja'
+  },
+
   /*
   ** Axios module configuration
   */
