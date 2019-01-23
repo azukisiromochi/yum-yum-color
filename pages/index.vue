@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar has-shadow is-spaced" :class="isMobile ? 'is-flex-touch' : ''">
       <div class="navbar-brand">
-        <a href="http://localhost:3000/">
+        <a href="https://yumyumcolor.com">
           <img class="logo" :src="logo_icon" alt="yum-yum COLOR">
         </a>
       </div>
@@ -11,7 +11,7 @@
           <span class="icon">
             <a
               target="_blank"
-              href="http://twitter.com/share?url=https://github.com/azukisiromochi/yum-yum-color&text=Check%20out%20yum-yum%20COLOR%20that%20creates%20neat%20color%20schemes!&hashtags=yumyumcolor"
+              href="http://twitter.com/share?url=https://yumyumcolor.com&text=Check%20out%20yum-yum%20COLOR%20that%20creates%20neat%20color%20schemes!&hashtags=yumyumcolor"
               onclick="window.open(this.href, 'tweetwindow', 'width=500, height=400, personalbar=0, toolbar=0, scrollbars=1, sizable=1'); return false;">
                 <fa :icon="faTwitter" />
               </a>
