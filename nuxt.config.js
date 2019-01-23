@@ -42,9 +42,10 @@ module.exports = {
     '@nuxtjs/pwa',
     '@nuxtjs/axios',
     ['nuxt-sass-resources-loader', './assets/main.scss'],
-    'nuxt-fontawesome'
+    'nuxt-fontawesome',
+    ['@nuxtjs/google-analytics', { id: 'UA-132964682-1' }],
   ],
-  
+
   /*
   ** PWA configuration
   */

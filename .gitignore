@@ -80,5 +80,5 @@ dist
 # IDE
 .idea
 
-# pwa
+# Service Worker
 sw.*
