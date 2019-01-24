@@ -40,7 +40,7 @@ export default {
 
     this.$anime
       .timeline({
-        targets: '#animation-container .ball',
+        targets: '.animation-container .ball',
         loop: true,
         duration: 2000,
       })
@@ -73,7 +73,7 @@ export default {
 
     this.$anime
       .timeline({
-        targets: '#animation-container .bar-presser',
+        targets: '.animation-container .bar-presser',
         loop: true,
         duration: 4000,
       })

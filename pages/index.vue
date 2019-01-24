@@ -11,6 +11,7 @@
           <span class="icon">
             <a
               target="_blank"
+              rel="noopener"
               href="http://twitter.com/share?url=https://yumyumcolor.com&text=Check%20out%20yum-yum%20COLOR%20that%20creates%20neat%20color%20schemes!&hashtags=yumyumcolor"
               onclick="window.open(this.href, 'tweetwindow', 'width=500, height=400, personalbar=0, toolbar=0, scrollbars=1, sizable=1'); return false;">
                 <fa :icon="faTwitter" />
@@ -19,7 +20,7 @@
         </div>
         <div class="navbar-item">
           <span class="icon">
-            <a target="_blank" href="https://github.com/azukisiromochi/yum-yum-color">
+            <a target="_blank" rel="noopener" href="https://github.com/azukisiromochi/yum-yum-color">
               <fa :icon="faGithubAlt" />
             </a>
           </span>
@@ -41,7 +42,7 @@
       <div class="columns">
         <div class="column">
           <div class="content has-text-centered">
-            <p>Designed & Developed By <a target="_blank" href="https://twitter.com/azukisiromochi">@azukisiromochi</a></p>
+            <p>Designed & Developed By <a target="_blank" rel="noopener" href="https://twitter.com/azukisiromochi">@azukisiromochi</a></p>
           </div>
         </div>
         <div class="column">
@@ -88,7 +89,7 @@ export default {
 <style lang="scss" scoped>
 a {
   color: $grey-light;
-  :hover { color: $grey; }
+  &:hover { color: $grey; }
 }
 
 .container {
@@ -121,7 +122,11 @@ a {
 
 .footer {
   font-family: amertype_md_btmedium, serif !important;
-  color: $grey-light;
+  color: $grey-dark;
+  a {
+    color: $grey-dark;
+    &:hover { color: $grey-light; }
+  }
 }
 
 // mobile styles
