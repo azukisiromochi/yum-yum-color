@@ -5,19 +5,19 @@
         <div class="tile is-vertical">
           <div class="tile tone-button-box t-is-p">
             <div class="tone-button to-grd" :class="cIsX" @click="selectTone('p')">p+</div>
-            <div v-show="tone === 'p'" class="butterfly"><img :src="butterfly_img"></div>
+            <div v-show="tone === 'p'" class="butterfly"><img :src="butterfly_img" alt="butterfly"></div>
           </div>
           <div class="tile tone-button-box t-is-ltg">
             <div class="tone-button to-grd" :class="cIsX" @click="selectTone('ltg')">ltg</div>
-            <div v-show="tone === 'ltg'" class="butterfly"><img :src="butterfly_img"></div>
+            <div v-show="tone === 'ltg'" class="butterfly"><img :src="butterfly_img" alt="butterfly"></div>
           </div>
           <div class="tile tone-button-box t-is-g">
             <div class="tone-button to-grd" :class="cIsX" @click="selectTone('g')">g</div>
-            <div v-show="tone === 'g'" class="butterfly"><img :src="butterfly_img"></div>
+            <div v-show="tone === 'g'" class="butterfly"><img :src="butterfly_img" alt="butterfly"></div>
           </div>
           <div class="tile tone-button-box t-is-dkg">
             <div class="tone-button to-grd" :class="cIsX" @click="selectTone('dkg')">dkg</div>
-            <div v-show="tone === 'dkg'" class="butterfly"><img :src="butterfly_img"></div>
+            <div v-show="tone === 'dkg'" class="butterfly"><img :src="butterfly_img" alt="butterfly"></div>
           </div>
         </div>
       </div>
@@ -25,19 +25,19 @@
         <div class="tile is-vertical">
           <div class="tile tone-button-box t-is-lt">
             <div class="tone-button to-grd" :class="cIsX" @click="selectTone('lt')">lt+</div>
-            <div v-show="tone === 'lt'" class="butterfly"><img :src="butterfly_img"></div>
+            <div v-show="tone === 'lt'" class="butterfly"><img :src="butterfly_img" alt="butterfly"></div>
           </div>
           <div class="tile tone-button-box  t-is-sf">
             <div class="tone-button to-grd" :class="cIsX" @click="selectTone('sf')">sf</div>
-            <div v-show="tone === 'sf'" class="butterfly"><img :src="butterfly_img"></div>
+            <div v-show="tone === 'sf'" class="butterfly"><img :src="butterfly_img" alt="butterfly"></div>
           </div>
           <div class="tile tone-button-box t-is-d">
             <div class="tone-button to-grd" :class="cIsX" @click="selectTone('d')">d</div>
-            <div v-show="tone === 'd'" class="butterfly"><img :src="butterfly_img"></div>
+            <div v-show="tone === 'd'" class="butterfly"><img :src="butterfly_img" alt="butterfly"></div>
           </div>
           <div class="tile tone-button-box t-is-dk">
             <div class="tone-button to-grd" :class="cIsX" @click="selectTone('dk')">dk</div>
-            <div v-show="tone === 'dk'" class="butterfly"><img :src="butterfly_img"></div>
+            <div v-show="tone === 'dk'" class="butterfly"><img :src="butterfly_img" alt="butterfly"></div>
           </div>
         </div>
       </div>
@@ -45,22 +45,22 @@
         <div class="tile is-vertical">
           <div class="tile tone-button-box t-is-b">
             <div class="tone-button to-grd" :class="cIsX" @click="selectTone('b')">b</div>
-            <div v-show="tone === 'b'" class="butterfly"><img :src="butterfly_img"></div>
+            <div v-show="tone === 'b'" class="butterfly"><img :src="butterfly_img" alt="butterfly"></div>
           </div>
           <div class="tile tone-button-box t-is-s">
             <div class="tone-button to-grd" :class="cIsX" @click="selectTone('s')">s</div>
-            <div v-show="tone === 's'" class="butterfly"><img :src="butterfly_img"></div>
+            <div v-show="tone === 's'" class="butterfly"><img :src="butterfly_img" alt="butterfly"></div>
           </div>
           <div class="tile tone-button-box t-is-dp">
             <div class="tone-button to-grd" :class="cIsX" @click="selectTone('dp')">dp</div>
-            <div v-show="tone === 'dp'" class="butterfly"><img :src="butterfly_img"></div>
+            <div v-show="tone === 'dp'" class="butterfly"><img :src="butterfly_img" alt="butterfly"></div>
           </div>
         </div>
       </div>
       <div class="column">
         <div class="tile tone-button-box  t-is-v">
           <div class="tone-button to-grd" :class="cIsX" @click="selectTone('v')">v</div>
-          <div v-show="tone === 'v'" class="butterfly"><img :src="butterfly_img"></div>
+          <div v-show="tone === 'v'" class="butterfly"><img :src="butterfly_img" alt="butterfly"></div>
         </div>
       </div>
     </div>

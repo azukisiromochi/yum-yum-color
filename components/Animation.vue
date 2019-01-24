@@ -1,5 +1,5 @@
 <template>
-  <div id="animation-container" v-bind:style="bcStyle">
+  <div class="animation-container" v-bind:style="bcStyle">
     <div class="slider" v-bind:style="c3Style"></div>
     <div class="bar" v-bind:style="c4Style"></div>
     <div class="bar-presser" v-bind:style="bcStyle"></div>
@@ -99,7 +99,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#animation-container {
+.animation-container {
   position: relative;
   width: 300px;
   height: 300px;
