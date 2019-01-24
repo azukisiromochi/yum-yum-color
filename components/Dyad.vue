@@ -29,7 +29,7 @@
             <div class="media">
               <div class="media-left">
                 <figure class="image is-48x48">
-                  <img class="is-rounded" :src="transparent_image" :class="cIsX2">
+                  <img class="is-rounded" :src="transparent_image" :class="cIsX2" alt>
                 </figure>
               </div>
               <div class="media-content">

@@ -1,7 +1,7 @@
 <template>
   <div id="hue-circle-container" :class="isMobile ? 'is-flex-touch' : ''">
     <canvas id="hue-circle"></canvas>
-    <div id="fork"><img :src="fork_img"></div>
+    <div id="fork"><img :src="fork_img" alt="fork"></div>
     <div id="cover"></div>
   </div>
 </template>
