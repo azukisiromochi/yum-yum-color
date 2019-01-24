@@ -44,6 +44,10 @@ module.exports = {
     ['nuxt-sass-resources-loader', './assets/main.scss'],
     'nuxt-fontawesome',
     ['@nuxtjs/google-analytics', { id: 'UA-132964682-1' }],
+    ['@nuxtjs/google-adsense', {
+      id: 'ca-pub-1346330979971658',
+      pageLevelAds: true,
+    }],
   ],
 
   /*
