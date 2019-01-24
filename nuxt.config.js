@@ -50,8 +50,15 @@ module.exports = {
   ** PWA configuration
   */
   manifest: {
+    short_name: "yum-yum COLOR",
     name: "yum-yum COLOR",
-    lang: 'ja'
+    lang: 'ja',
+    icons: [
+      {
+        "type": "image/png",
+        "sizes": "512x512"
+      },
+    ],
   },
 
   /*
