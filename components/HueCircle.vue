@@ -153,6 +153,7 @@ export default {
     width: 420px;
     height: 420px;
     margin: auto;
+    -webkit-tap-highlight-color: transparent;
   }
 
   &.is-flex-touch {
