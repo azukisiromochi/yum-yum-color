@@ -72,7 +72,6 @@ export default {
     cursor: url('/color-palette.png') 16 16, pointer;
     margin-top: 10px;
     margin-bottom: 30px;
-    -webkit-tap-highlight-color: transparent;
   }
 
   /deep/ .card {

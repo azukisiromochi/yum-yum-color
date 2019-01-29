@@ -109,6 +109,7 @@ a {
   section {
     width: 100%;
   }
+  -webkit-tap-highlight-color: transparent;
 }
 
 .logo {
