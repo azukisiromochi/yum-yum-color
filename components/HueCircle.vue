@@ -18,6 +18,7 @@ export default {
     return {
       fork_img: require("~/static/fork.png"),
       isMobile: Device.any,
+      lastRotate: 0,
     }
   },
   mounted() {
@@ -84,13 +85,16 @@ export default {
       console.log('distance: ' + distance + ', degree: ' + degree)
       if (radius / 2 < distance && distance < radius) {
         const colorName = this.selectedColor(degree)
+        const src = this.lastRotate
         if (colorName) {
           this.changeColor(colorName)
+          const rotate = this.calRotate(src)
           this.$anime({
             targets: '#fork',
             duration: 5000,
-            rotate: this.getDegree(),
+            rotate: rotate,
           })
+          this.lastRotate = rotate
         }
       }
     },
@@ -118,6 +122,24 @@ export default {
     toDegree: function (radian) {
       const degree = radian * 180 / Math.PI
       return degree > 0 ? degree : degree + 360
+    },
+    calRotate: function (src) {
+      const magnification = parseInt(Math.abs(src / 360))
+      const _src = src > 360
+        ? src - (360 * magnification)
+        : src < 0
+          ? src + (360 * (magnification + 1))
+          : src
+      const diff = this.getDegree() - _src
+      let rotate = src
+      if (diff > 180) {
+        rotate += diff - 360
+      } else if (diff < 0 && diff < - 180) {
+        rotate += diff + 360
+      } else {
+        rotate += diff
+      }
+      return rotate
     },
     ...mapMutations({
       changeColor: 'colorTone/select'
