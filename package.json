@@ -15,6 +15,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.12",
     "@fortawesome/free-brands-svg-icons": "^5.6.3",
+    "@fortawesome/free-solid-svg-icons": "^5.7.2",
     "@fortawesome/vue-fontawesome": "^0.1.5",
     "@nuxtjs/axios": "^5.0.0",
     "@nuxtjs/bulma": "^1.2.0",
@@ -26,7 +27,7 @@
     "nuxt": "^2.0.0",
     "nuxt-fontawesome": "^0.4.0",
     "vue-animejs": "^1.0.2",
-    "vue-loader": "^15.6.0",
+    "vue-loader": "^15.6.2",
     "vue-toasted": "^1.1.26"
   },
   "devDependencies": {
