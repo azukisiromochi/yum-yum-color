@@ -12,6 +12,17 @@
             <a
               target="_blank"
               rel="noopener"
+              aria-label="Blog"
+              href="https://blog.yumyumcolor.com/categories/yum-yum-color/">
+                <fa :icon="fas.faBlog" />
+              </a>
+            </span>
+        </div>
+        <div class="navbar-item">
+          <span class="icon">
+            <a
+              target="_blank"
+              rel="noopener"
               aria-label="Twitter"
               href="http://twitter.com/share?url=https://yumyumcolor.com&text=Check%20out%20yum-yum%20COLOR%20that%20creates%20neat%20color%20schemes!&hashtags=yumyumcolor"
               onclick="window.open(this.href, 'tweetwindow', 'width=500, height=400, personalbar=0, toolbar=0, scrollbars=1, sizable=1'); return false;">
@@ -64,6 +75,7 @@
 import HueCircle from '~/components/HueCircle.vue'
 import ColorTone from '~/components/ColorTone.vue'
 import ColorScheme from '~/components/ColorScheme.vue'
+import { fas } from '@fortawesome/free-solid-svg-icons'
 import { faTwitter, faGithubAlt } from '@fortawesome/free-brands-svg-icons'
 import Device from 'ismobilejs'
 
@@ -76,6 +88,9 @@ export default {
     }
   },
   computed: {
+    fas () {
+       return fas
+    },
     faTwitter () {
        return faTwitter
     },
