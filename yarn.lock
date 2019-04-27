@@ -2189,11 +2189,6 @@ bulma@^0.7.1:
   resolved "https://registry.yarnpkg.com/bulma/-/bulma-0.7.2.tgz#8e944377b74c7926558830d38d8e19eaf49f5fb6"
   integrity sha512-6JHEu8U/1xsyOst/El5ImLcZIiE2JFXgvrz8GGWbnDLwTNRPJzdAM0aoUM1Ns0avALcVb6KZz9NhzmU53dGDcQ==
 
-butterfly-radio@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/butterfly-radio/-/butterfly-radio-1.0.0.tgz#d4e9c3388c7d6847b0be2a96f7a3fa12eae842da"
-  integrity sha512-P4M846DLlSSPDl07im/M8R2QjWfuEH24OfptdNdyTr5rvVSd4DkQ1sCo6oGSy/722Hqz3loUsEbLlXE2VcF9yg==
-
 bytes@3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/bytes/-/bytes-3.0.0.tgz#d32815404d689699f85a4ea4fa8755dd13a96048"
