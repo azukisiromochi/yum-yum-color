@@ -54,6 +54,11 @@
         <color-scheme/>
       </section>
     </div>
+    <butterfly-radio name="flower">
+  <input type="radio" value="1"><label>Red flower</label>
+  <input type="radio" value="2"><label>Green flower</label>
+  <input type="radio" value="3"><label>Blue flower</label>
+</butterfly-radio>
     <footer class="footer">
       <div class="columns">
         <div class="column">
@@ -78,6 +83,8 @@ import ColorScheme from '~/components/ColorScheme.vue'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 import { faTwitter, faGithubAlt } from '@fortawesome/free-brands-svg-icons'
 import Device from 'ismobilejs'
+const butterflyRadio = require("butterfly-radio");
+butterflyRadio();
 
 export default {
   data () {
