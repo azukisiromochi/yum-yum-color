@@ -1,9 +1,7 @@
 @import "~bulma/sass/utilities/_all.sass";
-@import "~bulma/bulma";
 
-@font-face {
-  font-display: swap;
-}
+$family-primary: sans-serif;
+@import "~bulma/bulma";
 
 .t-is-v {
   .c-is-R {
