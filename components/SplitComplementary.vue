@@ -13,25 +13,46 @@
         </div>
       </div>
     </section>
-    <div class="columns color-scheme" :class="isTablet ? tIsX + ' is-flex-touch' : tIsX">
-      <div class="column is-6" :class="cIsX" @click="copyColorCode(colorCode)">{{colorCode}}</div>
-      <div class="column" :class="cIsX2" @click="copyColorCode(colorCode2)">{{colorCode2}}</div>
-      <div class="column" :class="cIsX3" @click="copyColorCode(colorCode3)">{{colorCode3}}</div>
+    <div
+      :class="isTablet ? tIsX + ' is-flex-touch' : tIsX"
+      class="columns color-scheme">
+      <div
+        :class="cIsX"
+        class="column is-6"
+        @click="copyColorCode(colorCode)">{{ colorCode }}</div>
+      <div
+        :class="cIsX2"
+        class="column"
+        @click="copyColorCode(colorCode2)">{{ colorCode2 }}</div>
+      <div
+        :class="cIsX3"
+        class="column"
+        @click="copyColorCode(colorCode3)">{{ colorCode3 }}</div>
     </div>
-    <div class="columns" :class="tIsX">
+    <div
+      :class="tIsX"
+      class="columns">
       <div class="column">
         <div class="card">
-          <header class="card-header" :class="cIsX">
-            <p class="card-header-title" :class="cIsX">
+          <header
+            :class="cIsX"
+            class="card-header">
+            <p
+              :class="cIsX"
+              class="card-header-title">
               yum-yum COLOR
             </p>
-            <a class="delete is-medium"></a>
+            <a class="delete is-medium"/>
           </header>
           <div class="card-content">
             <div class="media">
               <div class="media-left">
                 <figure class="image is-48x48">
-                  <img class="is-rounded" :src="transparent_image" :class="cIsX2" alt>
+                  <img
+                    :src="transparent_image"
+                    :class="cIsX2"
+                    class="is-rounded"
+                    alt>
                 </figure>
               </div>
               <div class="media-content">
@@ -47,26 +68,34 @@
               <div class="field is-grouped is-grouped-multiline">
                 <div class="control">
                   <div class="tags has-addons">
-                    <span class="tag" :class="cIsX3">color</span>
-                    <a class="tag is-delete"></a>
+                    <span
+                      :class="cIsX3"
+                      class="tag">color</span>
+                    <a class="tag is-delete"/>
                   </div>
                 </div>
                 <div class="control">
                   <div class="tags has-addons">
-                    <span class="tag" :class="cIsX3">HTML</span>
-                    <a class="tag is-delete"></a>
+                    <span
+                      :class="cIsX3"
+                      class="tag">HTML</span>
+                    <a class="tag is-delete"/>
                   </div>
                 </div>
                 <div class="control">
                   <div class="tags has-addons">
-                    <span class="tag" :class="cIsX3">CSS</span>
-                    <a class="tag is-delete"></a>
+                    <span
+                      :class="cIsX3"
+                      class="tag">CSS</span>
+                    <a class="tag is-delete"/>
                   </div>
                 </div>
                 <div class="control">
                   <div class="tags has-addons">
-                    <span class="tag" :class="cIsX3">Web Design</span>
-                    <a class="tag is-delete"></a>
+                    <span
+                      :class="cIsX3"
+                      class="tag">Web Design</span>
+                    <a class="tag is-delete"/>
                   </div>
                 </div>
               </div>
@@ -94,7 +123,11 @@ import Toasted from 'vue-toasted'
 Vue.use(Toasted)
 
 export default {
-  data: function () {
+  components: {
+    animation: Animation,
+    'picture-frame': Picture
+  },
+  data: function() {
     return {
       tone: 'v',
       selectColor: 'Y',
@@ -110,9 +143,9 @@ export default {
         bc: '#eec900',
         c2: '#005ba5',
         c3: '#81378a',
-        c4: '#005ba5',
+        c4: '#005ba5'
       },
-      isTablet: Device.tablet,
+      isTablet: Device.tablet
     }
   },
   mounted() {
@@ -146,15 +179,15 @@ export default {
       let splitComplementaryColors = this.getSplitComplementary()
       this.cIsX2 = 'c-is-' + splitComplementaryColors[0]
       this.cIsX3 = 'c-is-' + splitComplementaryColors[1]
-      this.colorCode2 =  colors[splitComplementaryColors[0]]
-      this.colorCode3 =  colors[splitComplementaryColors[1]]
+      this.colorCode2 = colors[splitComplementaryColors[0]]
+      this.colorCode3 = colors[splitComplementaryColors[1]]
 
       this.colorCodes.bc = this.colorCode
       this.colorCodes.c2 = this.colorCode2
       this.colorCodes.c3 = this.colorCode3
       this.colorCodes.c4 = this.colorCode2
     },
-    copyColorCode: function (colorCode) {
+    copyColorCode: function(colorCode) {
       const temp = document.createElement('div')
       temp.appendChild(document.createElement('pre')).textContent = colorCode
 
@@ -167,35 +200,30 @@ export default {
 
       if (document.execCommand('copy')) {
         this.$toasted.show('Copied to clipboard !!', {
-        	 theme: 'outline',
-        	 position: 'top-center',
-        	 duration : 2000
+          theme: 'outline',
+          position: 'top-center',
+          duration: 2000
         })
       } else {
         this.$toasted.show('Failed to copy to clipboard...', {
-        	 theme: 'bubble',
-        	 position: 'top-center',
-        	 duration : 2000
+          theme: 'bubble',
+          position: 'top-center',
+          duration: 2000
         })
       }
 
       document.body.removeChild(temp)
     },
     ...mapMutations({
-      changeColorTone: 'colorTone/change',
+      changeColorTone: 'colorTone/change'
     }),
     ...mapGetters({
       getColors: 'colorTone/colors',
-      getSplitComplementary: 'colorTone/splitComplementary',
+      getSplitComplementary: 'colorTone/splitComplementary'
     })
-  },
-  components: {
-    'animation': Animation,
-    'picture-frame': Picture,
-  },
+  }
 }
 </script>
 
 <style lang="scss" scoped>
-
 </style>

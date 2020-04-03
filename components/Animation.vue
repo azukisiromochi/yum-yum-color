@@ -1,39 +1,58 @@
 <template>
-  <div class="animation-container" v-bind:style="bcStyle">
-    <div class="slider" v-bind:style="c3Style"></div>
-    <div class="bar" v-bind:style="c4Style"></div>
-    <div class="bar-presser" v-bind:style="bcStyle"></div>
-    <div class="ball" v-bind:style="c2Style"></div>
+  <div
+    :style="bcStyle"
+    class="animation-container">
+    <div
+      :style="c3Style"
+      class="slider"/>
+    <div
+      :style="c4Style"
+      class="bar"/>
+    <div
+      :style="bcStyle"
+      class="bar-presser"/>
+    <div
+      :style="c2Style"
+      class="ball"/>
   </div>
 </template>
 
 <script>
 export default {
   props: {
-    colorCodes: Object,
+    colorCodes: {
+      type: Object,
+      required: true,
+      default: () => ({
+        bc: '#eec900',
+        c2: '#534aa0',
+        c3: '#534aa0',
+        c4: '#534aa0'
+      })
+    }
   },
-  data: function () {
+  data: function() {
     return {
       bcStyle: { background: this.colorCodes.bc },
       c2Style: { background: this.colorCodes.c2 },
       c3Style: {
         'border-top': '98px solid ' + this.colorCodes.bc,
-      	'border-right': '98px solid ' + this.colorCodes.c3,
-      	'border-bottom': '98px solid ' + this.colorCodes.c3,
-      	'border-left': '98px solid ' + this.colorCodes.bc,
+        'border-right': '98px solid ' + this.colorCodes.c3,
+        'border-bottom': '98px solid ' + this.colorCodes.c3,
+        'border-left': '98px solid ' + this.colorCodes.bc
       },
-      c4Style: { background: this.colorCodes.c4 },
+      c4Style: { background: this.colorCodes.c4 }
     }
   },
   mounted() {
-    this.$watch('colorCodes.bc', function (newVal, oldVal) {
+    this.$watch('colorCodes.bc', function(newVal, oldVal) {
       this.bcStyle = { background: this.colorCodes.bc }
       this.c2Style = { background: this.colorCodes.c2 }
       this.c3Style = {
         'border-top': '98px solid ' + this.colorCodes.bc,
-      	'border-right': '98px solid ' + this.colorCodes.c3,
-      	'border-bottom': '98px solid ' + this.colorCodes.c3,
-      	'border-left': '98px solid ' + this.colorCodes.bc,
+        'border-right': '98px solid ' + this.colorCodes.c3,
+        'border-bottom': '98px solid ' + this.colorCodes.c3,
+        'border-left': '98px solid ' + this.colorCodes.bc
       }
       this.c4Style = { background: this.colorCodes.c4 }
     })
@@ -42,40 +61,40 @@ export default {
       .timeline({
         targets: '.animation-container .ball',
         loop: true,
-        duration: 2000,
+        duration: 2000
       })
       .add({
         translateX: [250, 205],
         translateY: 1,
-        easing: 'easeInOutQuad',
+        easing: 'easeInOutQuad'
       })
       .add({
         translateX: [205, 1],
         translateY: [1, 205],
         duration: 1500,
-        easing: 'easeInOutQuad',
+        easing: 'easeInOutQuad'
       })
       .add({
         translateX: 1,
         translateY: [205, 250],
-        duration: 500,
+        duration: 500
       })
       .add({
         translateX: [1, 250],
         translateY: [250, 250],
-        easing: 'easeInOutQuad',
+        easing: 'easeInOutQuad'
       })
       .add({
         translateX: 250,
         translateY: 1,
-        easing: 'easeInOutQuad',
+        easing: 'easeInOutQuad'
       })
 
     this.$anime
       .timeline({
         targets: '.animation-container .bar-presser',
         loop: true,
-        duration: 4000,
+        duration: 4000
       })
       .add({
         height: {
@@ -83,7 +102,7 @@ export default {
           delay: 1500,
           duration: 1000,
           easing: 'easeInOutSine'
-        },
+        }
       })
       .add({
         height: {
@@ -91,10 +110,9 @@ export default {
           delay: 3550,
           duration: 1950,
           easing: 'easeInOutSine'
-        },
+        }
       })
-
-  },
+  }
 }
 </script>
 
@@ -129,9 +147,9 @@ export default {
   height: 0px;
   margin: 1px;
 }
-.slider{
-	width: 0;
-	height: 0;
+.slider {
+  width: 0;
+  height: 0;
   left: 50px;
   top: 51px;
 }
