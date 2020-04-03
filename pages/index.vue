@@ -1,12 +1,19 @@
 <template>
   <div>
-    <nav class="navbar has-shadow is-spaced" :class="isMobile ? 'is-flex-touch' : ''">
+    <nav 
+      :class="isMobile ? 'is-flex-touch' : ''" 
+      class="navbar has-shadow is-spaced">
       <div class="navbar-brand">
         <a href="https://yumyumcolor.com">
-          <img class="logo" :src="logo_icon" alt="yum-yum COLOR">
+          <img 
+            :src="logo_icon" 
+            class="logo" 
+            alt="yum-yum COLOR">
         </a>
       </div>
-      <div class="navbar-end" :class="isMobile ? 'is-flex-touch' : ''">
+      <div 
+        :class="isMobile ? 'is-flex-touch' : ''" 
+        class="navbar-end">
         <div class="navbar-item">
           <span class="icon">
             <a
@@ -14,9 +21,9 @@
               rel="noopener"
               aria-label="Blog"
               href="https://blog.yumyumcolor.com/categories/yum-yum-color/">
-                <fa :icon="fas.faBlog" />
-              </a>
-            </span>
+              <fa :icon="fas.faBlog" />
+            </a>
+          </span>
         </div>
         <div class="navbar-item">
           <span class="icon">
@@ -26,9 +33,9 @@
               aria-label="Twitter"
               href="http://twitter.com/share?url=https://yumyumcolor.com&text=Check%20out%20yum-yum%20COLOR%20that%20creates%20neat%20color%20schemes!&hashtags=yumyumcolor"
               onclick="window.open(this.href, 'tweetwindow', 'width=500, height=400, personalbar=0, toolbar=0, scrollbars=1, sizable=1'); return false;">
-                <fa :icon="faTwitter" />
-              </a>
-            </span>
+              <fa :icon="faTwitter" />
+            </a>
+          </span>
         </div>
         <div class="navbar-item">
           <span class="icon">
@@ -45,7 +52,9 @@
     </nav>
     <div class="container">
       <section class="section">
-        <div class="columns" :class="isTablet ? 'is-flex-touch' : ''">
+        <div 
+          :class="isTablet ? 'is-flex-touch' : ''" 
+          class="columns">
           <div class="column"><hue-circle/></div>
           <div class="column"><color-tone/></div>
         </div>
@@ -58,7 +67,10 @@
       <div class="columns">
         <div class="column">
           <div class="content has-text-centered">
-            <p>Designed & Developed By <a target="_blank" rel="noopener" href="https://twitter.com/azukisiromochi">@azukisiromochi</a></p>
+            <p>Designed & Developed By <a 
+              target="_blank" 
+              rel="noopener" 
+              href="https://twitter.com/azukisiromochi">@azukisiromochi</a></p>
           </div>
         </div>
         <div class="column">
@@ -80,28 +92,28 @@ import { faTwitter, faGithubAlt } from '@fortawesome/free-brands-svg-icons'
 import Device from 'ismobilejs'
 
 export default {
-  data () {
-    return {
-      logo_icon: require("~/static/logo.png"),
-      isMobile: Device.any,
-      isTablet: Device.tablet,
-    }
-  },
-  computed: {
-    fas () {
-       return fas
-    },
-    faTwitter () {
-       return faTwitter
-    },
-    faGithubAlt () {
-       return faGithubAlt
-    }
-  },
   components: {
     'hue-circle': HueCircle,
     'color-tone': ColorTone,
-    'color-scheme': ColorScheme,
+    'color-scheme': ColorScheme
+  },
+  data() {
+    return {
+      logo_icon: require('~/static/logo.png'),
+      isMobile: Device.any,
+      isTablet: Device.tablet
+    }
+  },
+  computed: {
+    fas() {
+      return fas
+    },
+    faTwitter() {
+      return faTwitter
+    },
+    faGithubAlt() {
+      return faGithubAlt
+    }
   }
 }
 </script>
@@ -109,7 +121,9 @@ export default {
 <style lang="scss" scoped>
 a {
   color: $grey-light;
-  &:hover { color: $grey; }
+  &:hover {
+    color: $grey;
+  }
 }
 
 .container {
@@ -146,7 +160,9 @@ a {
   color: $grey-dark;
   a {
     color: $grey-dark;
-    &:hover { color: $grey-light; }
+    &:hover {
+      color: $grey-light;
+    }
   }
 }
 
@@ -156,7 +172,8 @@ a {
     justify-content: center;
     padding: 10px;
   }
-  .navbar-brand, .navbar-end {
+  .navbar-brand,
+  .navbar-end {
     margin: auto 10px;
   }
 }

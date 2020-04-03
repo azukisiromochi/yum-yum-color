@@ -1,8 +1,12 @@
 <template>
-  <div id="hue-circle-container" :class="isMobile ? 'is-flex-touch' : ''">
-    <canvas id="hue-circle"></canvas>
-    <div id="fork"><img :src="fork_img" alt="fork"></div>
-    <div id="cover"></div>
+  <div 
+    id="hue-circle-container" 
+    :class="isMobile ? 'is-flex-touch' : ''">
+    <canvas id="hue-circle"/>
+    <div id="fork"><img 
+      :src="fork_img" 
+      alt="fork"></div>
+    <div id="cover"/>
   </div>
 </template>
 
@@ -10,15 +14,15 @@
 import Vue from 'vue'
 import { mapMutations, mapGetters } from 'vuex'
 import Device from 'ismobilejs'
-import VueAnime from 'vue-animejs';
+import VueAnime from 'vue-animejs'
 Vue.use(VueAnime)
 
 export default {
-  data: function () {
+  data: function() {
     return {
-      fork_img: require("~/static/fork.png"),
+      fork_img: require('~/static/fork.png'),
       isMobile: Device.any,
-      lastRotate: 0,
+      lastRotate: 0
     }
   },
   mounted() {
@@ -36,11 +40,11 @@ export default {
       targets: '#fork',
       delay: 500,
       duration: 5000,
-      rotate: [180, 0],
+      rotate: [180, 0]
     })
   },
   methods: {
-    makeHueCircle: function (colors) {
+    makeHueCircle: function(colors) {
       const container = document.getElementById('hue-circle-container')
       const canvas = document.getElementById('hue-circle')
       canvas.width = container.clientWidth
@@ -59,21 +63,20 @@ export default {
 
       let angle = 255
       for (let i = 0; i < 12; i++) {
-
         this.fill(ctx, x, y, radius, angle, angle + 30, colors[i])
         angle += 30
       }
 
       this.fill(ctx, x, y, radius / 2, 0, 360, '#FFFFFF')
     },
-    fill: function (ctx, x, y, radius, startAngle, endAngle, colorCode) {
+    fill: function(ctx, x, y, radius, startAngle, endAngle, colorCode) {
       ctx.beginPath()
       ctx.moveTo(x, y)
       ctx.arc(x, y, radius, this.toRadian(startAngle), this.toRadian(endAngle))
       ctx.fillStyle = colorCode
       ctx.fill()
     },
-    clickHueCircle: function (e) {
+    clickHueCircle: function(e) {
       const canvas = document.getElementById('hue-circle')
       const x = canvas.width / 2
       const y = canvas.height / 2
@@ -92,15 +95,15 @@ export default {
           this.$anime({
             targets: '#fork',
             duration: 5000,
-            rotate: rotate,
+            rotate: rotate
           })
           this.lastRotate = rotate
         }
       }
     },
-    selectedColor: function (degree) {
+    selectedColor: function(degree) {
       const colorNames = Object.keys(this.getColors())
-      const check = (degree < 255) ? degree + 360 : degree
+      const check = degree < 255 ? degree + 360 : degree
       let angle = 255
       for (let i = 0; i < 12; i++) {
         if (angle <= check && check < angle + 30) {
@@ -110,31 +113,32 @@ export default {
       }
       return null
     },
-    calDistance: function (x, y, x2, y2) {
+    calDistance: function(x, y, x2, y2) {
       return Math.sqrt((x2 - x) * (x2 - x) + (y2 - y) * (y2 - y))
     },
-    calDegree: function (x, y, x2, y2) {
-      return this.toDegree(Math.atan2(y2 - y,x2 - x))
+    calDegree: function(x, y, x2, y2) {
+      return this.toDegree(Math.atan2(y2 - y, x2 - x))
     },
-    toRadian: function (degree) {
-      return degree * Math.PI / 180
+    toRadian: function(degree) {
+      return (degree * Math.PI) / 180
     },
-    toDegree: function (radian) {
-      const degree = radian * 180 / Math.PI
+    toDegree: function(radian) {
+      const degree = (radian * 180) / Math.PI
       return degree > 0 ? degree : degree + 360
     },
-    calRotate: function (src) {
+    calRotate: function(src) {
       const magnification = parseInt(Math.abs(src / 360))
-      const _src = src > 360
-        ? src - (360 * magnification)
-        : src < 0
-          ? src + (360 * (magnification + 1))
-          : src
+      const _src =
+        src > 360
+          ? src - 360 * magnification
+          : src < 0
+            ? src + 360 * (magnification + 1)
+            : src
       const diff = this.getDegree() - _src
       let rotate = src
       if (diff > 180) {
         rotate += diff - 360
-      } else if (diff < 0 && diff < - 180) {
+      } else if (diff < 0 && diff < -180) {
         rotate += diff + 360
       } else {
         rotate += diff
@@ -146,7 +150,7 @@ export default {
     }),
     ...mapGetters({
       getColors: 'colorTone/colors',
-      getDegree: 'colorTone/degree',
+      getDegree: 'colorTone/degree'
     })
   }
 }

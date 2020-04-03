@@ -13,9 +13,7 @@ module.exports = {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: pkg.description }
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
 
   /*
@@ -26,14 +24,12 @@ module.exports = {
   /*
   ** Global CSS
   */
-  css: [
-  ],
+  css: [],
 
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [
-  ],
+  plugins: [],
 
   /*
   ** Nuxt.js modules
@@ -44,25 +40,28 @@ module.exports = {
     ['nuxt-sass-resources-loader', './assets/main.scss'],
     'nuxt-fontawesome',
     ['@nuxtjs/google-analytics', { id: 'UA-132964682-1' }],
-    ['@nuxtjs/google-adsense', {
-      id: 'ca-pub-1346330979971658',
-      pageLevelAds: true,
-    }],
+    [
+      '@nuxtjs/google-adsense',
+      {
+        id: 'ca-pub-1346330979971658',
+        pageLevelAds: true
+      }
+    ]
   ],
 
   /*
   ** PWA configuration
   */
   manifest: {
-    short_name: "yum-yum COLOR",
-    name: "yum-yum COLOR",
+    short_name: 'yum-yum COLOR',
+    name: 'yum-yum COLOR',
     lang: 'ja',
     icons: [
       {
-        "type": "image/png",
-        "sizes": "512x512"
-      },
-    ],
+        type: 'image/png',
+        sizes: '512x512'
+      }
+    ]
   },
 
   /*
