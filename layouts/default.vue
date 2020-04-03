@@ -10,7 +10,7 @@ export default {
     link: [
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css?family=Baloo+Thambi+2&display=swap'
+        href: 'https://fonts.googleapis.com/css?family=Roboto:wght@100&display=swap'
       }
     ]
   },
@@ -23,7 +23,7 @@ html {
   word-spacing: 1px;
   box-sizing: border-box;
   body {
-    font-family: 'Baloo Thambi 2' !important;
+    font-family: 'Roboto' !important;
   }
 }
 
