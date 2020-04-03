@@ -1,6 +1,8 @@
 @import "~bulma/sass/utilities/_all.sass";
 
-$family-primary: sans-serif;
+$family-serif: serif;
+$family-primary: $family-serif;
+
 @import "~bulma/bulma";
 
 .t-is-v {
