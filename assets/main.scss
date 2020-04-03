@@ -1,6 +1,10 @@
 @import "~bulma/sass/utilities/_all.sass";
 @import "~bulma/bulma";
 
+@font-face {
+  font-display: swap;
+}
+
 .t-is-v {
   .c-is-R {
     background: #d02f48;
