@@ -39,6 +39,7 @@ module.exports = {
     '@nuxtjs/axios',
     ['nuxt-sass-resources-loader', './assets/main.scss'],
     'nuxt-fontawesome',
+    'nuxt-webfontloader',
     ['@nuxtjs/google-analytics', { id: 'UA-132964682-1' }],
     [
       '@nuxtjs/google-adsense',
@@ -48,6 +49,18 @@ module.exports = {
       }
     ]
   ],
+
+  /*
+  ** Google fonts
+  */
+  webfontloader: {
+    google: {
+      families: [
+        'Slabo+27px',
+        'Rock+Salt'
+      ]
+    }
+  },
 
   /*
   ** PWA configuration
