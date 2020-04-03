@@ -80,7 +80,7 @@ export default {
       c2Style: { fill: this.colorCodes.c2 },
       c3Style: { fill: this.colorCodes.c3 },
       c4Style: { fill: this.colorCodes.c4 },
-      frame_image: require('~/static/picture-frame.png'),
+      frame_image: require('~/static/picture-frame.jpeg'),
       isMobile: Device.any
     }
   },
