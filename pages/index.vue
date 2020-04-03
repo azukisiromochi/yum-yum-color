@@ -92,6 +92,14 @@ import { faTwitter, faGithubAlt } from '@fortawesome/free-brands-svg-icons'
 import Device from 'ismobilejs'
 
 export default {
+  head: {
+    link: [
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css?family=Slabo+27px&display=swap'
+      }
+    ]
+  },
   components: {
     'hue-circle': HueCircle,
     'color-tone': ColorTone,
@@ -156,7 +164,7 @@ a {
 }
 
 .footer {
-  font-family: 'Slabo 27px', serif !important;
+  font-family: 'Slabo 27px' !important;
   color: $grey-dark;
   a {
     color: $grey-dark;
