@@ -62,6 +62,14 @@
 import Device from 'ismobilejs'
 
 export default {
+  head: {
+    link: [
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css?family=Rock+Salt&display=swap'
+      }
+    ]
+  },
   props: {
     colorCodes: {
       type: Object,

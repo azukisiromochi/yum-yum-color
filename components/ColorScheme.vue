@@ -84,6 +84,14 @@ import Analogous from '~/components/Analogous.vue'
 import Tetrad from '~/components/Tetrad.vue'
 
 export default {
+  head: {
+    link: [
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css?family=Slabo+27px&display=swap'
+      }
+    ]
+  },
   components: {
     dyad: Dyad,
     triad: Triad,
@@ -112,7 +120,7 @@ export default {
   }
 
   /deep/ .color-scheme {
-    font-family: 'Slabo 27px', serif !important;
+    font-family: 'Slabo 27px' !important;
     cursor: url('/color-palette.png') 16 16, pointer;
     margin-top: 10px;
     margin-bottom: 30px;
@@ -133,7 +141,7 @@ export default {
   /deep/ .hero {
     .title,
     .subtitle {
-      font-family: 'Slabo 27px', serif !important;
+      font-family: 'Slabo 27px' !important;
       color: $grey-light;
     }
   }
