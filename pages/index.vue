@@ -1,18 +1,18 @@
 <template>
   <div>
-    <nav 
-      :class="isMobile ? 'is-flex-touch' : ''" 
+    <nav
+      :class="isMobile ? 'is-flex-touch' : ''"
       class="navbar has-shadow is-spaced">
       <div class="navbar-brand">
         <a href="https://yumyumcolor.com">
-          <img 
-            :src="logo_icon" 
-            class="logo" 
+          <img
+            :src="logo_icon"
+            class="logo"
             alt="yum-yum COLOR">
         </a>
       </div>
-      <div 
-        :class="isMobile ? 'is-flex-touch' : ''" 
+      <div
+        :class="isMobile ? 'is-flex-touch' : ''"
         class="navbar-end">
         <div class="navbar-item">
           <span class="icon">
@@ -52,8 +52,8 @@
     </nav>
     <div class="container">
       <section class="section">
-        <div 
-          :class="isTablet ? 'is-flex-touch' : ''" 
+        <div
+          :class="isTablet ? 'is-flex-touch' : ''"
           class="columns">
           <div class="column"><hue-circle/></div>
           <div class="column"><color-tone/></div>
@@ -67,9 +67,9 @@
       <div class="columns">
         <div class="column">
           <div class="content has-text-centered">
-            <p>Designed & Developed By <a 
-              target="_blank" 
-              rel="noopener" 
+            <p>Designed & Developed By <a
+              target="_blank"
+              rel="noopener"
               href="https://twitter.com/azukisiromochi">@azukisiromochi</a></p>
           </div>
         </div>
@@ -156,7 +156,7 @@ a {
 }
 
 .footer {
-  font-family: amertype_md_btmedium, serif !important;
+  font-family: 'Slabo 27px', serif !important;
   color: $grey-dark;
   a {
     color: $grey-dark;

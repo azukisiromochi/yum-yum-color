@@ -2,34 +2,34 @@
   <div id="color-scheme-container">
     <div class="tile box">
       <div class="color-scheme-radio">
-        <input 
-          id="cs--dyad" 
-          v-model="colorScheme" 
-          type="radio" 
+        <input
+          id="cs--dyad"
+          v-model="colorScheme"
+          type="radio"
           value="dyad">
         <label for="cs--dyad">Dyad</label>
-        <input 
-          id="cs--triad" 
-          v-model="colorScheme" 
-          type="radio" 
+        <input
+          id="cs--triad"
+          v-model="colorScheme"
+          type="radio"
           value="triad">
         <label for="cs--triad">Triad</label>
-        <input 
-          id="cs--split-comp" 
-          v-model="colorScheme" 
-          type="radio" 
+        <input
+          id="cs--split-comp"
+          v-model="colorScheme"
+          type="radio"
           value="split-comp">
         <label for="cs--split-comp">Split-complementary</label>
-        <input 
-          id="cs--analogous" 
-          v-model="colorScheme" 
-          type="radio" 
+        <input
+          id="cs--analogous"
+          v-model="colorScheme"
+          type="radio"
           value="analogous">
         <label for="cs--analogous">Analogous</label>
-        <input 
-          id="cs--tetrad" 
-          v-model="colorScheme" 
-          type="radio" 
+        <input
+          id="cs--tetrad"
+          v-model="colorScheme"
+          type="radio"
           value="tetrad">
         <label for="cs--tetrad">Tetrad</label>
       </div>
@@ -41,34 +41,34 @@
     <tetrad v-show="colorScheme === 'tetrad'"/>
     <div class="tile box">
       <div class="color-scheme-radio">
-        <input 
-          id="cs2--dyad" 
-          v-model="colorScheme" 
-          type="radio" 
+        <input
+          id="cs2--dyad"
+          v-model="colorScheme"
+          type="radio"
           value="dyad">
         <label for="cs2--dyad">Dyad</label>
-        <input 
-          id="cs2--triad" 
-          v-model="colorScheme" 
-          type="radio" 
+        <input
+          id="cs2--triad"
+          v-model="colorScheme"
+          type="radio"
           value="triad">
         <label for="cs2--triad">Triad</label>
-        <input 
-          id="cs2--split-comp" 
-          v-model="colorScheme" 
-          type="radio" 
+        <input
+          id="cs2--split-comp"
+          v-model="colorScheme"
+          type="radio"
           value="split-comp">
         <label for="cs2--split-comp">Split-complementary</label>
-        <input 
-          id="cs2--analogous" 
-          v-model="colorScheme" 
-          type="radio" 
+        <input
+          id="cs2--analogous"
+          v-model="colorScheme"
+          type="radio"
           value="analogous">
         <label for="cs2--analogous">Analogous</label>
-        <input 
-          id="cs2--tetrad" 
-          v-model="colorScheme" 
-          type="radio" 
+        <input
+          id="cs2--tetrad"
+          v-model="colorScheme"
+          type="radio"
           value="tetrad">
         <label for="cs2--tetrad">Tetrad</label>
       </div>
@@ -112,7 +112,7 @@ export default {
   }
 
   /deep/ .color-scheme {
-    font-family: amertype_md_btmedium, serif !important;
+    font-family: 'Slabo 27px', serif !important;
     cursor: url('/color-palette.png') 16 16, pointer;
     margin-top: 10px;
     margin-bottom: 30px;
@@ -133,7 +133,7 @@ export default {
   /deep/ .hero {
     .title,
     .subtitle {
-      font-family: amertype_md_btmedium, serif !important;
+      font-family: 'Slabo 27px', serif !important;
       color: $grey-light;
     }
   }
