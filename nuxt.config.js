@@ -24,7 +24,7 @@ module.exports = {
   /*
   ** Global CSS
   */
-  css: [],
+  css: [{ src: '~assets/main.scss', lang: 'scss' }],
 
   /*
   ** Plugins to load before mounting the App
@@ -37,7 +37,6 @@ module.exports = {
   modules: [
     '@nuxtjs/pwa',
     '@nuxtjs/axios',
-    ['nuxt-sass-resources-loader', './assets/main.scss'],
     'nuxt-fontawesome',
     ['@nuxtjs/google-analytics', { id: 'UA-132964682-1' }],
     [

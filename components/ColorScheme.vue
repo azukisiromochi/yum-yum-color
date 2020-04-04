@@ -108,6 +108,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+$white: hsl(0, 0%, 100%);
+$grey-dark: hsl(0, 0%, 29%);
+$grey-light: hsl(0, 0%, 71%);
+
 .is-dyad,
 .is-triad,
 .is-split-complementary,

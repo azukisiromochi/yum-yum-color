@@ -127,6 +127,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+$grey-dark: hsl(0, 0%, 29%);
+$grey: hsl(0, 0%, 48%);
+$grey-light: hsl(0, 0%, 71%);
+
 a {
   color: $grey-light;
   &:hover {
