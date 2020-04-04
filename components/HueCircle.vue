@@ -1,10 +1,10 @@
 <template>
-  <div 
-    id="hue-circle-container" 
+  <div
+    id="hue-circle-container"
     :class="isMobile ? 'is-flex-touch' : ''">
     <canvas id="hue-circle"/>
-    <div id="fork"><img 
-      :src="fork_img" 
+    <div id="fork"><img
+      :src="fork_img"
       alt="fork"></div>
     <div id="cover"/>
   </div>
@@ -85,7 +85,6 @@ export default {
       const distance = this.calDistance(x, y, e.layerX, e.layerY)
       const degree = this.calDegree(x, y, e.layerX, e.layerY)
 
-      console.log('distance: ' + distance + ', degree: ' + degree)
       if (radius / 2 < distance && distance < radius) {
         const colorName = this.selectedColor(degree)
         const src = this.lastRotate

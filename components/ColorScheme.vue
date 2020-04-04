@@ -84,14 +84,6 @@ import Analogous from '~/components/Analogous.vue'
 import Tetrad from '~/components/Tetrad.vue'
 
 export default {
-  head: {
-    link: [
-      {
-        rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css?family=Slabo+27px&display=swap'
-      }
-    ]
-  },
   components: {
     dyad: Dyad,
     triad: Triad,
