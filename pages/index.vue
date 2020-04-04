@@ -21,7 +21,7 @@
               rel="noopener"
               aria-label="Blog"
               href="https://blog.yumyumcolor.com/categories/yum-yum-color/">
-              <fa :icon="fas.faBlog" />
+              <fa :icon="faBlog" />
             </a>
           </span>
         </div>
@@ -87,7 +87,7 @@
 import HueCircle from '~/components/HueCircle.vue'
 import ColorTone from '~/components/ColorTone.vue'
 import ColorScheme from '~/components/ColorScheme.vue'
-import { fas } from '@fortawesome/free-solid-svg-icons'
+import { faBlog } from '@fortawesome/free-solid-svg-icons'
 import { faTwitter, faGithubAlt } from '@fortawesome/free-brands-svg-icons'
 import Device from 'ismobilejs'
 
@@ -113,8 +113,8 @@ export default {
     }
   },
   computed: {
-    fas() {
-      return fas
+    faBlog() {
+      return faBlog
     },
     faTwitter() {
       return faTwitter

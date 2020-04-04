@@ -78,6 +78,7 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    analyze: true,
     postcss: {
       preset: {
         features: {
