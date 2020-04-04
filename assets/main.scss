@@ -1,11 +1,7 @@
-@import "~bulma/sass/utilities/_all.sass";
+@import "~bulma/sass/utilities/initial-variables";
 
-@font-face {
-  font-family: "Roboto";
-  src: url("https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmEU9fBBc4AMP6lQ.woff2") format("woff2"),
-    url("https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2") format("woff2");
-  font-display: swap;
-}
+$family-serif: serif;
+$family-primary: $family-serif;
 
 @import "~bulma/bulma";
 
