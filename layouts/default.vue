@@ -10,10 +10,11 @@ export default {
     link: [
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css?family=Baloo+Thambi+2&display=swap'
+        href:
+          'https://fonts.googleapis.com/css?family=Baloo+Thambi+2&display=swap'
       }
     ]
-  },
+  }
 }
 </script>
 
