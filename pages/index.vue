@@ -19,17 +19,6 @@
             <a
               target="_blank"
               rel="noopener"
-              aria-label="Blog"
-              href="https://blog.yumyumcolor.com/categories/yum-yum-color/">
-              <fa :icon="faBlog" />
-            </a>
-          </span>
-        </div>
-        <div class="navbar-item">
-          <span class="icon">
-            <a
-              target="_blank"
-              rel="noopener"
               aria-label="Twitter"
               href="http://twitter.com/share?url=https://yumyumcolor.com&text=Check%20out%20yum-yum%20COLOR%20that%20creates%20neat%20color%20schemes!&hashtags=yumyumcolor"
               onclick="window.open(this.href, 'tweetwindow', 'width=500, height=400, personalbar=0, toolbar=0, scrollbars=1, sizable=1'); return false;">
